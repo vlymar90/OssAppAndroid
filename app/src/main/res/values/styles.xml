@@ -7,5 +7,9 @@
     <item name="backgroundTint">#555B6F</item>
     <item name="cornerRadius">12dp</item>
 </style>
+    <style name="buttonPrimary" parent="button">
+        <item name="android:textColor">#AFAFAF</item>
+        <item name="backgroundTint">#E7E7E7</item>
+    </style>
 
 </resources>
