@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OssApp</string>
+    <string name="resume">Продолжить</string>
+    <string name="input_number">Введите номер телефона</string>
+    <string name="manual">Чтобы войти или зарегистрироваться в OssApp</string>
+    <string name="location">Страна/регион</string>
+</resources>
