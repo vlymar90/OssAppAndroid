@@ -35,6 +35,7 @@ public class InputActivity extends AppCompatActivity {
         button.setEnabled(false);
         setTextButton();
 
+        /*Это неправильно, надо думать как переделать*/
         editText.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {

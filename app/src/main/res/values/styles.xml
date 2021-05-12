@@ -12,13 +12,47 @@
         <item name="backgroundTint">#E7E7E7</item>
     </style>
 
-    <style name="buttonback" >
-        <item name="android:layout_width">20dp</item>
-        <item name="android:layout_height">27dp</item>
-        <item name="android:layout_marginStart">16dp</item>
-        <item name="android:layout_marginTop">24dp</item>
-<!--        <item name="android:background">@drawable/vector</item>-->
-        <item name="android:text">Button</item>
+    <style name="buttonsecond" parent="button" >
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">@color/white</item>
     </style>
+    <style name="header">
+        <item name="android:layout_width">281dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="imagebutton">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">108dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/solid</item>
+    </style>
+
+    <style name="text">
+        <item name="android:layout_width">284dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textColor">#939393</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="inputtext">
+        <item name="android:layout_width">384dp</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:textColorHighlight">@color/black</item>
+        <item name="android:textColorLink">@color/black</item>
+        <item name="android:textCursorDrawable">@color/black</item>
+    </style>
+
+    <style name="inputtextProfil" parent="inputtext">
+        <item name="android:layout_width">357dp</item>
+        <item name="android:layout_height">52dp</item>
+    </style>
+
+
+
 
 </resources>
