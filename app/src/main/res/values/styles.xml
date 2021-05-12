@@ -12,4 +12,13 @@
         <item name="backgroundTint">#E7E7E7</item>
     </style>
 
+    <style name="buttonback" >
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">27dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+<!--        <item name="android:background">@drawable/vector</item>-->
+        <item name="android:text">Button</item>
+    </style>
+
 </resources>

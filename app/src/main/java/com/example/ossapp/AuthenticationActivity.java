@@ -18,10 +18,10 @@ public class AuthenticationActivity extends AppCompatActivity {
     public void sendAuth(View view) {
         EditText code = (EditText)findViewById(R.id.code);
         EditText numberPhone = (EditText)findViewById(R.id.number);
-        StringBuilder total = new StringBuilder(code.getText().append(numberPhone.getText()));
+//        StringBuilder total = new StringBuilder(code.getText().append(numberPhone.getText()));
         //Здесь логика отпраки номере телефона на сервер....
         Intent intent = new Intent(this, InputActivity.class);
-        intent.putExtra(InputActivity.NUMBER, total.toString());
+        intent.putExtra(InputActivity.NUMBER, code.getText().toString() + numberPhone.getText().toString());
         startActivity(intent);
 
     }
