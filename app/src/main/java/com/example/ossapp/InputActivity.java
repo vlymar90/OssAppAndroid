@@ -3,18 +3,13 @@ package com.example.ossapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.SystemClock;
-import android.view.KeyEvent;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class InputActivity extends AppCompatActivity {
       public static final String NUMBER = "message";
@@ -35,18 +30,23 @@ public class InputActivity extends AppCompatActivity {
         button.setEnabled(false);
         setTextButton();
 
-        editText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if(keyCode == KeyEvent.KEYCODE_ENTER) {
-                    /*логика отправки кода на сервер и принятия решение какую страницу
-                    показывать пользователю дальше
-                     */
-                    return true;
-                }
-                return false;
-            }
-        });
+//        editText.addTextChangedListener(new TextAction() {
+//
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
     }
     public void repeatCode(View view) {
         //логика отправки запроса на сервер
