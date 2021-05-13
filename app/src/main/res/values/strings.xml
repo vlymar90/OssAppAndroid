@@ -4,4 +4,10 @@
     <string name="input_number">Введите номер телефона</string>
     <string name="manual">Чтобы войти или зарегистрироваться в OssApp</string>
     <string name="location">Страна/регион</string>
+    <string name="header1">Заполни информацию о себе</string>
+    <string name="name">Имя</string>
+    <string name="age">Возраст</string>
+    <string name="weight">Вес</string>
+    <string name="hintAge">лет</string>
+    <string name="hintWeight">кг</string>
 </resources>
