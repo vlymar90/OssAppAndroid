@@ -85,43 +85,46 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/descriptionUser"
         style="@android:style/Widget.AutoCompleteTextView"
         android:layout_width="357dp"
         android:layout_height="117dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/solid"
         android:breakStrategy="simple"
         android:ems="10"
-        android:background="@drawable/solid"
+        android:fadeScrollbars="true"
         android:gravity="start|top"
         android:hint="О себе"
         android:inputType="textMultiLine"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weightUser" />
 
-    <ImageButton
-        android:id="@+id/imageMen"
-        android:onClick="setSexMen"
-        style="@style/imagebutton"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageWoman"
-        app:layout_constraintHorizontal_bias="0.645"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-        app:srcCompat="@drawable/men" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageMen"-->
+<!--        android:onClick="setSexMen"-->
+<!--        style="@style/imagebutton"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/imageWoman"-->
+<!--        app:layout_constraintHorizontal_bias="0.645"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"-->
+<!--        app:srcCompat="@drawable/ic_launcher_image_button_men_background" />-->
 
-    <ImageButton
-        android:id="@+id/imageWoman"
-        android:onClick="setSexWoman"
-        style="@style/imagebutton"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-        app:srcCompat="@drawable/woman" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageWoman"-->
+<!--        android:onClick="setSexWoman"-->
+<!--        style="@style/imagebutton"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"-->
+<!--        app:srcCompat="@drawable/ic_launcher_image_button_woman_background" />-->
 
     <Button
+        android:onClick="resumeInfo"
         android:id="@+id/button3"
         style="@style/buttonsecond"
         android:layout_marginTop="40dp"
@@ -129,7 +132,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageMen" />
+        app:layout_constraintTop_toBottomOf="@+id/descriptionUser" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
