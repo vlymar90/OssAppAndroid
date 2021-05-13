@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformationActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/header"
+        android:layout_marginTop="16dp"
+        android:text="@string/header1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/nameUser"
+        style="@style/inputtextProfil"
+        android:layout_marginTop="8dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameUser" />
+
+
+    <EditText
+        android:id="@+id/ageUser"
+        style="@style/inputtextProfil"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:hint="@string/hintAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageUser" />
+
+    <EditText
+        android:id="@+id/weightUser"
+        style="@style/inputtextProfil"
+        android:hint="@string/hintWeight"
+        android:layout_marginTop="12dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/descriptionUser"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:layout_width="357dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/solid"
+        android:breakStrategy="simple"
+        android:ems="10"
+        android:fadeScrollbars="true"
+        android:gravity="start|top"
+        android:hint="О себе"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightUser" />
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageMen"-->
+<!--        android:onClick="setSexMen"-->
+<!--        style="@style/imagebutton"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/imageWoman"-->
+<!--        app:layout_constraintHorizontal_bias="0.645"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"-->
+<!--        app:srcCompat="@drawable/ic_launcher_image_button_men_background" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageWoman"-->
+<!--        android:onClick="setSexWoman"-->
+<!--        style="@style/imagebutton"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"-->
+<!--        app:srcCompat="@drawable/ic_launcher_image_button_woman_background" />-->
+
+    <Button
+        android:onClick="resumeInfo"
+        android:id="@+id/button3"
+        style="@style/buttonsecond"
+        android:layout_marginTop="40dp"
+        android:text="@string/resume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionUser" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
