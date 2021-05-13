@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OssApp">
         <activity android:name=".InformationActivity"></activity>
-        <activity android:name=".RulesActivity" />
+        <activity android:name=".RulesActivity"/>
         <activity android:name=".InputActivity" />
         <activity android:name=".AuthenticationActivity" />
+        <activity android:name=".AvatarActivity"/>
+        <activity android:name=".ChooseAvatarActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

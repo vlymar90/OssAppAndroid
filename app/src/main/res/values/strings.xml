@@ -4,6 +4,9 @@
     <string name="input_number">Введите номер телефона</string>
     <string name="manual">Чтобы войти или зарегистрироваться в OssApp</string>
     <string name="location">Страна/регион</string>
+    <string name="avatar">Добавить свою фотографию</string>
+    <string name="skip">Пропустить</string>
+    <string name="back">Убрать фото</string>
     <string name="header1">Заполни информацию о себе</string>
     <string name="name">Имя</string>
     <string name="age">Возраст</string>
