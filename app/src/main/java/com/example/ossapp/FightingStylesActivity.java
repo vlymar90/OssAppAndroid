@@ -16,7 +16,7 @@ public class FightingStylesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fighting_styles);
     }
-
+    /*Метод - слушатель для всех кнопок. Меняет состояние кнопки*/
     public void selectStyle(View view) {
         Button button = (Button) view;
         if (User.getInstance().getUserStyleList().size() != 3) {
