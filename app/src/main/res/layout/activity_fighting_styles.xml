@@ -32,95 +32,109 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/style1"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
+                android:state_pressed="true" android:drawable="@color/dark_grey"
+                android:text="@string/style1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/style2"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
-                android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
-                android:text="Button"
+                android:text="@string/style2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button14" />
+                app:layout_constraintTop_toBottomOf="@+id/style10" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/style3"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
-                android:text="Button"
+                android:text="@string/style3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button5" />
+                app:layout_constraintTop_toBottomOf="@+id/style1" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/style4"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
-                android:text="Button"
+                android:text="@string/style4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/style5"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
-                android:text="Button"
+                android:text="@string/style5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button7" />
+                app:layout_constraintTop_toBottomOf="@+id/style3" />
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/style6"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
-                android:text="Button"
+                android:text="@string/style6"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button8" />
+                app:layout_constraintTop_toBottomOf="@+id/style4" />
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/style7"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
-                android:text="Button"
+                android:text="@string/style7"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button9" />
+                app:layout_constraintTop_toBottomOf="@+id/style5" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/style8"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
-                android:text="Button"
+                android:text="@string/style8"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button10" />
+                app:layout_constraintTop_toBottomOf="@+id/style6" />
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/style9"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
-
-                android:text="Button"
+                android:text="@string/style9"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button11" />
+                app:layout_constraintTop_toBottomOf="@+id/style7" />
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/style10"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
+                android:state_pressed="true" android:drawable="@color/dark_grey"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="12dp"
-                android:text="Button"
+                android:text="@string/style10"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button12" />
+                app:layout_constraintTop_toBottomOf="@+id/style8" />
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/style11"
+                android:onClick="selectStyle"
                 style="@style/buttonstyle"
-                android:text="Button"
+                android:state_pressed="true" android:drawable="@color/dark_grey"
+                android:text="@string/style11"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button13" />
+                app:layout_constraintTop_toBottomOf="@+id/style9" />
 
             <Button
+                android:onClick="nextStage"
                 android:id="@+id/button16"
                 style="@style/buttonsecond"
                 android:layout_marginTop="32dp"
@@ -129,7 +143,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button15" />
+                app:layout_constraintTop_toBottomOf="@+id/style11" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
