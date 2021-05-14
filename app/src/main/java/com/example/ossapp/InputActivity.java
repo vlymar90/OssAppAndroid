@@ -56,7 +56,7 @@ public class InputActivity extends AppCompatActivity {
      * Пока не реализован. Написаный код просто для тестовой навигации
      * по приложению */
     public void sendReg(View view) {
-        Intent intent = new Intent(this, InformationActivity.class);
+        Intent intent = new Intent(this, FightingStylesActivity.class);
         startActivity(intent);
     }
 }

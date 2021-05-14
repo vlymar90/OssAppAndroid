@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OssApp">
-        <activity android:name=".InformationActivity"></activity>
-        <activity android:name=".RulesActivity"/>
+
+        <activity android:name=".FightingStylesActivity"></activity>
+        <activity android:name=".InformationActivity" />
+        <activity android:name=".RulesActivity" />
+       
         <activity android:name=".InputActivity" />
         <activity android:name=".AuthenticationActivity" />
         <activity android:name=".AvatarActivity"/>

@@ -13,4 +13,17 @@
     <string name="weight">Вес</string>
     <string name="hintAge">лет</string>
     <string name="hintWeight">кг</string>
+    <string name="header2">Выбери свои стили единоборств: от 1 до 3</string>
+    <string name="title_activity_fighting_styles">ScrollingActivity</string>
+    <string name="style1">Бразильское джиу-джитсу</string>
+    <string name="style2">MMA</string>
+    <string name="style3">Бокс</string>
+    <string name="style4">Муай-тай</string>
+    <string name="style5">Кикбоксинг</string>
+    <string name="style6">Карате</string>
+    <string name="style7">Самбо</string>
+    <string name="style8">Тхэквондо</string>
+    <string name="style9">Дзюдо</string>
+    <string name="style10">Вольная борьба</string>
+    <string name="style11">Грэпплинг</string>
 </resources>

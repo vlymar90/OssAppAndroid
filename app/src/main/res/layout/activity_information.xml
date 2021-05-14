@@ -9,7 +9,6 @@
     <TextView
         android:id="@+id/textView4"
         style="@style/header"
-        android:layout_marginTop="16dp"
         android:text="@string/header1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
