@@ -11,10 +11,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class InputActivity extends AppCompatActivity {
-      public static final String NUMBER = "message";
-      private String textButton = "Запросить повторно через 00:%d";
-      private Button button;
-      private EditText codeInput;
+    public static final String NUMBER = "message";
+    private String textButton = "Запросить повторно через 00:%d";
+    private Button button;
+    private EditText codeInput;
 
 
     @Override
@@ -33,12 +33,12 @@ public class InputActivity extends AppCompatActivity {
     /*Метод повторного запроса кода*/
     public void repeatCode(View view) {
         //логика отправки запроса на сервер
-          button.setEnabled(false);
-          setTextButton();
+        button.setEnabled(false);
+        setTextButton();
     }
 
     /*Метод устанавливает на кнопку "таймер".
-    * Пока идёт время кнопка не активна */
+     * Пока идёт время кнопка не активна */
     private void setTextButton() {
         new CountDownTimer(59000, 1000) {
             @Override
@@ -53,8 +53,8 @@ public class InputActivity extends AppCompatActivity {
         }.start();
     }
     /*Метод для подтверждения, введеного пользователем кода.
-    * Пока не реализован. Написаный код просто для тестовой навигации
-    * по приложению */
+     * Пока не реализован. Написаный код просто для тестовой навигации
+     * по приложению */
     public void sendReg(View view) {
         Intent intent = new Intent(this, FightingStylesActivity.class);
         startActivity(intent);
