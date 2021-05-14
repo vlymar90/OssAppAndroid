@@ -31,12 +31,18 @@ public class AvatarActivity extends AppCompatActivity {
 
         Intent fromChoosingAvatar = getIntent();
 
+        /*
+        устанавливаем аватар выбранный в ChooseAvatarActivity
+         */
         if (fromChoosingAvatar.hasExtra("picture")) {
             byte [] bytes = fromChoosingAvatar.getByteArrayExtra("picture");
             Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
             avatar.setImageBitmap(bitmap);
         }
 
+        /*
+        метод для выбора аватара
+         */
         avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
