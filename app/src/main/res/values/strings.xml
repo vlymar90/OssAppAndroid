@@ -10,4 +10,7 @@
     <string name="weight">Вес</string>
     <string name="hintAge">лет</string>
     <string name="hintWeight">кг</string>
+    <string name="header2">Выбери свои стили единоборств: от 1 до 3</string>
+    <string name="title_activity_fighting_styles">ScrollingActivity</string>
+
 </resources>
