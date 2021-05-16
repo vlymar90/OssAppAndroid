@@ -13,7 +13,6 @@
         <activity android:name=".FightingStylesActivity"></activity>
         <activity android:name=".InformationActivity" />
         <activity android:name=".RulesActivity" />
-       
         <activity android:name=".InputActivity" />
         <activity android:name=".AuthenticationActivity" />
         <activity android:name=".AvatarActivity"/>

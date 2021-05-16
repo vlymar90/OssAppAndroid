@@ -18,15 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/avatar"
         android:layout_width="260dp"
         android:layout_height="260dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/press"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/installAvatar" />
+        app:layout_constraintTop_toBottomOf="@id/installAvatar"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/next"

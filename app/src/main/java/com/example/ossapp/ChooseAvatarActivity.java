@@ -23,12 +23,12 @@ public class ChooseAvatarActivity extends AppCompatActivity {
         setContentView(R.layout.choose_avatar);
 
         Button back = (Button) findViewById(R.id.back);
-        ImageButton bruce = (ImageButton) findViewById(R.id.bruce);
-        ImageButton tyson = (ImageButton) findViewById(R.id.tyson);
-        ImageButton habib = (ImageButton) findViewById(R.id.habib);
-        ImageButton mcgregor = (ImageButton) findViewById(R.id.mcgregor);
-        ImageButton chan = (ImageButton) findViewById(R.id.chan);
-        ImageButton vandamme = (ImageButton) findViewById(R.id.vandamme);
+        ImageView bruce = (ImageView) findViewById(R.id.bruce);
+        ImageView tyson = (ImageView) findViewById(R.id.tyson);
+        ImageView habib = (ImageView) findViewById(R.id.habib);
+        ImageView mcgregor = (ImageView) findViewById(R.id.mcgregor);
+        ImageView chan = (ImageView) findViewById(R.id.chan);
+        ImageView vandamme = (ImageView) findViewById(R.id.vandamme);
 
         /*
         метод перехода в AvavtarActivity без аватара
@@ -42,7 +42,7 @@ public class ChooseAvatarActivity extends AppCompatActivity {
             }
         });
         /*
-        метод перехода в AvavtarActivity с аватаром bruce
+        методы перехода в AvavtarActivity с аватаром
         (картинки позже поменяем)
         */
         bruce.setOnClickListener(new View.OnClickListener() {
@@ -90,10 +90,10 @@ public class ChooseAvatarActivity extends AppCompatActivity {
 
     /*
     метод, который отправляет изображение из
-    ChoooseAvatarActivity в AvavtarActivity
+    ChooseAvatarActivity в AvatarActivity
     требует дальнейшей доработки
      */
-    private void choosingAvatar(ImageButton image) {
+    private void choosingAvatar(ImageView image) {
         Context context = ChooseAvatarActivity.this;
 
         Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();

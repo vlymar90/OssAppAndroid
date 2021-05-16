@@ -27,7 +27,7 @@ public class AvatarActivity extends AppCompatActivity {
         TextView installAvatar = findViewById(R.id.installAvatar);
         Button next = (Button) findViewById(R.id.next);
         Button skip = (Button) findViewById(R.id.skip);
-        ImageButton avatar = (ImageButton) findViewById(R.id.avatar);
+        ImageView avatar = (ImageView) findViewById(R.id.avatar);
 
         Intent fromChoosingAvatar = getIntent();
 
@@ -48,7 +48,7 @@ public class AvatarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Context context = AvatarActivity.this;
 
-                String nextActivity = "choose your avatar";
+                String nextActivity = "Choose your avatar";
                 Toast.makeText(context, nextActivity, Toast.LENGTH_LONG).show();
 
                 Intent nextActivityIntent = new Intent(context, ChooseAvatarActivity.class);
@@ -60,12 +60,10 @@ public class AvatarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Context context = AvatarActivity.this;
-                String nextActivity = "next";
-                Toast.makeText(context, nextActivity, Toast.LENGTH_LONG).show();
 
-                /*
-                Intent skippedActivityIntent = new Intent(context, SkipActivity.getClass());
+                Intent skippedActivityIntent = new Intent(context, FightingStylesActivity.class);
                 startActivity(skippedActivityIntent);
+                /*
                 переход к следующей странице
                 */
             }
@@ -75,12 +73,10 @@ public class AvatarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Context context = AvatarActivity.this;
-                String nextActivity = "skip";
-                Toast.makeText(context, nextActivity, Toast.LENGTH_LONG).show();
 
-                /*
-                Intent skippedActivityIntent = new Intent(context, SkipActivity.getClass());
+                Intent skippedActivityIntent = new Intent(context, FightingStylesActivity.class);
                 startActivity(skippedActivityIntent);
+                /*
                 переход к следующей странице без фото
                 */
             }

@@ -16,18 +16,23 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/bruce"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/bruce" />
 
-        <ImageButton
+
+        <ImageView
             android:id="@+id/tyson"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/tyson" />
 
     </LinearLayout>
@@ -40,18 +45,22 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/firstLine">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/mcgregor"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/bruce" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/habib"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/tyson" />
 
     </LinearLayout>
@@ -64,18 +73,22 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/secondLine">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/vandamme"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/bruce" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/chan"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/tyson" />
 
     </LinearLayout>
