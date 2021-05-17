@@ -42,7 +42,7 @@ public class AvatarActivity extends AppCompatActivity {
 
         /*
         метод для выбора аватара
-         */
+
         avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,11 +63,11 @@ public class AvatarActivity extends AppCompatActivity {
                 String nextActivity = "next";
                 Toast.makeText(context, nextActivity, Toast.LENGTH_LONG).show();
 
-                /*
+
                 Intent skippedActivityIntent = new Intent(context, SkipActivity.getClass());
                 startActivity(skippedActivityIntent);
                 переход к следующей странице
-                */
+
             }
         });
 
@@ -78,12 +78,12 @@ public class AvatarActivity extends AppCompatActivity {
                 String nextActivity = "skip";
                 Toast.makeText(context, nextActivity, Toast.LENGTH_LONG).show();
 
-                /*
+
                 Intent skippedActivityIntent = new Intent(context, SkipActivity.getClass());
                 startActivity(skippedActivityIntent);
                 переход к следующей странице без фото
-                */
+
             }
-        });
+        });*/
     }
 }

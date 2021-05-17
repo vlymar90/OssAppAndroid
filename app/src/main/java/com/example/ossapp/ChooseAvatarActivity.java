@@ -32,7 +32,7 @@ public class ChooseAvatarActivity extends AppCompatActivity {
 
         /*
         метод перехода в AvavtarActivity без аватара
-         */
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,10 +41,10 @@ public class ChooseAvatarActivity extends AppCompatActivity {
                 startActivity(nextActivityIntent);
             }
         });
-        /*
+
         метод перехода в AvavtarActivity с аватаром bruce
         (картинки позже поменяем)
-        */
+
         bruce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,11 +88,11 @@ public class ChooseAvatarActivity extends AppCompatActivity {
         });
     }
 
-    /*
+
     метод, который отправляет изображение из
     ChoooseAvatarActivity в AvavtarActivity
     требует дальнейшей доработки
-     */
+
     private void choosingAvatar(ImageButton image) {
         Context context = ChooseAvatarActivity.this;
 
@@ -105,5 +105,7 @@ public class ChooseAvatarActivity extends AppCompatActivity {
         nextActivityIntent.putExtra("picture", images);
 
         startActivity(nextActivityIntent);
+        */
+
     }
 }

@@ -8,9 +8,9 @@
     <string name="skip">Пропустить</string>
     <string name="back">Убрать фото</string>
     <string name="header1">Заполни информацию о себе</string>
-    <string name="name">Имя</string>
-    <string name="age">Возраст</string>
-    <string name="weight">Вес</string>
+    <string name="name">Введите ваше имя*</string>
+    <string name="age">Введите ваш возраст*</string>
+    <string name="weight">Выберите весовую каткгорию*</string>
     <string name="hintAge">лет</string>
     <string name="hintWeight">кг</string>
     <string name="header2">Выбери ваш вид единоборств
