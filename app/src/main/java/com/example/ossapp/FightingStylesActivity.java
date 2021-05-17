@@ -22,10 +22,10 @@ public class FightingStylesActivity extends AppCompatActivity {
         if (User.getInstance().getUserStyleList().size() != 3) {
             if (UtilSelectStyle.selectStyle(button.getText().toString())) {
                 button.setTextColor(Color.WHITE);
-                button.setBackgroundColor(Color.DKGRAY);
+                button.setBackgroundColor(Color.BLUE);
             } else {
                 button.setTextColor(Color.BLACK);
-                button.setBackgroundColor(Color.LTGRAY);
+                button.setBackgroundColor(Color.WHITE);
             }
         }
     }

@@ -13,12 +13,11 @@
     <string name="weight">Вес</string>
     <string name="hintAge">лет</string>
     <string name="hintWeight">кг</string>
-    <string name="header2">Выбери свои стили единоборств: от 1 до 3</string>
+    <string name="header2">Выбери ваш вид единоборств
+        (максимум 3)</string>
     <string name="title_activity_fighting_styles">ScrollingActivity</string>
-    <string name="style1">Бразильское джиу-джитсу</string>
     <string name="style2">MMA</string>
-    <string name="style3">Бокс</string>
-    <string name="style4">Муай-тай</string>
+    <string name="style3">БЖЖ</string>
     <string name="style5">Кикбоксинг</string>
     <string name="style6">Карате</string>
     <string name="style7">Самбо</string>
@@ -26,4 +25,28 @@
     <string name="style9">Дзюдо</string>
     <string name="style10">Вольная борьба</string>
     <string name="style11">Грэпплинг</string>
+    <string name="confirmation">Подтверждение</string>
+    <string name="rules">
+        "OssApp использует файлы cookie и личные данные"
+        "(такие как идентификаторы пользователей и"
+        "характеристики устройства), хранящиеся на вашем"
+        "устройстве, чтобы предоставлять услуги и повышать"
+        "их качество, обеспечивать безопасность, получать"
+        "аналитические сведения об аудитории и"
+        "предотвращать мошенничество.\n\n"
+
+        "С вашего согласия компания OssApp может"
+        "использовать эту информацию для персонализации"
+        "рекламы и определения ее эффективности. В"
+        "противном случае будут показываться только базовые"
+        "рекламные объявления.\n\n"
+
+        "Вы можете сделать выбор ниже, а также можете"
+        "изменить его в любое время в настройках. Ваш выбор"
+        "будет распространяться только на OssApp и не"
+        "повлияет на ваше использование других сайтов и"
+        "приложений."</string>
+    <string name="rulesname">OssApp защищает вашу конфиденциальность</string>
+    <string name="rulesbutton">Принять и продолжить</string>
+    <string name="addprofil">Заполнение профиля</string>
 </resources>

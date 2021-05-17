@@ -26,7 +26,7 @@ public class InputActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String number = intent.getStringExtra(NUMBER);
         TextView info = (TextView) findViewById(R.id.textViewInfo);
-        info.setText("Код отправлен на номер "  + number);
+        info.setText("Введите код, отправленные на "  + number);
         button.setEnabled(false);
         setTextButton();
     }
