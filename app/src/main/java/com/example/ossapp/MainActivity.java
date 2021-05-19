@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 
+import com.example.ossapp.loginpages.EntryActivity;
+
 
 public class MainActivity extends AppCompatActivity {
     private Intent intent;
@@ -13,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        intent = new Intent(this, AuthenticationActivity.class);
+        intent = new Intent(this, EntryActivity.class);
         start();
     }
 

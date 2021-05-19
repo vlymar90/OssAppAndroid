@@ -47,4 +47,17 @@
     <string name="rulesname">OssApp защищает вашу конфиденциальность</string>
     <string name="rulesbutton">Принять и продолжить</string>
     <string name="addprofil">Заполнение профиля</string>
+    <string name="info_entry">Нажимая «Создать аккаунт» или «Войти»,
+        вы соглашаетесь с нашими Условиями. Узнайте, как мы обрабатываем
+        ваши данные, ознакомившись с </string>
+    <string name="linkrules"><u>Политикой конфиденциальности и Политикой в отношении файлов cookie</u>.</string>
+    <string name="open">Войти</string>
+    <string name="create_profil">Создать аккаунт</string>
+    <string name="login_page_header">Войдите в приложение</string>
+    <string name="recover_password"><u>Забыли пароль?</u></string>
+    <string name="input">Войти</string>
+    <string name="password_header">Забыли пароль?</string>
+    <string name="info_password">Мы поможем вам его восстановить и опять войти в приложение. Просто введите Email
+    вашего аккаунта и мы отправим вам пароль.</string>
+    <string name="recover">Восстановить пароль</string>
 </resources>
