@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">OssApp</string>
     <string name="resume">Продолжить</string>
-    <string name="input_number">Введите номер телефона</string>
-    <string name="manual">Чтобы войти или зарегистрироваться в OssApp</string>
-    <string name="location">Страна/регион</string>
+    <string name="input_number">Зарегистрируйтесь в приложении</string>
     <string name="avatar">Добавить свою фотографию</string>
     <string name="skip">Пропустить</string>
     <string name="back">Убрать фото</string>
@@ -25,7 +23,7 @@
     <string name="style9">Дзюдо</string>
     <string name="style10">Вольная борьба</string>
     <string name="style11">Грэпплинг</string>
-    <string name="confirmation">Подтверждение</string>
+    <string name="confirmation">Подтвердите email</string>
     <string name="rules">
         "OssApp использует файлы cookie и личные данные"
         "(такие как идентификаторы пользователей и"

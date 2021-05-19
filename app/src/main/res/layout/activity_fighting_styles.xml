@@ -123,6 +123,7 @@
             <Button
                 android:id="@+id/button6"
                 style="@style/buttonstyle"
+                android:onClick="selectStyle"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/style3"
@@ -132,6 +133,7 @@
             <Button
                 android:id="@+id/button7"
                 style="@style/buttonstyle"
+                android:onClick="selectStyle"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/style6"

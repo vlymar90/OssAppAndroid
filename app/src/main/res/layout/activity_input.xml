@@ -11,48 +11,35 @@
         style="@style/header"
         android:layout_width="351dp"
         android:layout_height="70dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="12dp"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
         android:id="@+id/codeInput"
-        android:layout_width="166dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="32dp"
-        android:inputType="number"
+        android:layout_width="281dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
         android:hint="код"
+        android:inputType="number"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewInfo" />
 
-    <Button
-        android:id="@+id/button"
-        style="@style/buttonPrimary"
-        android:layout_width="286dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="32dp"
-        android:onClick="repeatCode"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button4"
-        android:onClick="sendReg"
         style="@style/buttonPrimary"
         android:layout_width="286dp"
         android:layout_height="55dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
+        android:onClick="sendReg"
         android:text="@string/resume"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -64,12 +51,27 @@
         style="@style/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="128dp"
         android:text="@string/confirmation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:onClick="repeatCode"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Запросить повторно"
+        android:textColor="@color/blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

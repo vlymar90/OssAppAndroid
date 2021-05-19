@@ -8,20 +8,18 @@ import android.view.View;
 import android.widget.EditText;
 
 public class AuthenticationActivity extends AppCompatActivity {
-//    EditText editText = (EditText)findViewById(R.id.)
+    private EditText emailUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentication);
+        emailUser = (EditText)findViewById(R.id.emailUser);
     }
 
     public void sendAuth(View view) {
-        EditText code = (EditText)findViewById(R.id.code);
-        EditText numberPhone = (EditText)findViewById(R.id.number);
-//        StringBuilder total = new StringBuilder(code.getText().append(numberPhone.getText()));
         //Здесь логика отпраки номере телефона на сервер....
         Intent intent = new Intent(this, InputActivity.class);
-        intent.putExtra(InputActivity.NUMBER, code.getText().toString() + numberPhone.getText().toString());
+        intent.putExtra(InputActivity.EMAIL, emailUser.getText().toString());
         startActivity(intent);
 
     }

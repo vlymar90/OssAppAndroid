@@ -11,9 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class InputActivity extends AppCompatActivity {
-    public static final String NUMBER = "message";
-    private String textButton = "Запросить повторно через 00:%d";
-    private Button button;
+    public static final String EMAIL = "message";
     private EditText codeInput;
 
 
@@ -21,37 +19,34 @@ public class InputActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
-        button = (Button) findViewById(R.id.button);
         codeInput = (EditText)findViewById(R.id.codeInput);
         Intent intent = getIntent();
-        String number = intent.getStringExtra(NUMBER);
+        String number = intent.getStringExtra(EMAIL);
         TextView info = (TextView) findViewById(R.id.textViewInfo);
-        info.setText("Введите код, отправленные на "  + number);
-        button.setEnabled(false);
-        setTextButton();
+        info.setText("Мы отправили 6-тизначный код " + EMAIL +
+                ". "+ "Введите полученный код.");
     }
     /*Метод повторного запроса кода*/
     public void repeatCode(View view) {
         //логика отправки запроса на сервер
-        button.setEnabled(false);
-        setTextButton();
+
     }
 
     /*Метод устанавливает на кнопку "таймер".
      * Пока идёт время кнопка не активна */
-    private void setTextButton() {
-        new CountDownTimer(59000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                button.setText(String.format(textButton, millisUntilFinished/1000));
-            }
-            @Override
-            public void onFinish() {
-                button.setText("повторить");
-                button.setEnabled(true);
-            }
-        }.start();
-    }
+//    private void setTextButton() {
+//        new CountDownTimer(59000, 1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//                button.setText(String.format(textButton, millisUntilFinished/1000));
+//            }
+//            @Override
+//            public void onFinish() {
+//                button.setText("повторить");
+//                button.setEnabled(true);
+//            }
+//        }.start();
+//    }
     /*Метод для подтверждения, введеного пользователем кода.
      * Пока не реализован. Написаный код просто для тестовой навигации
      * по приложению */
