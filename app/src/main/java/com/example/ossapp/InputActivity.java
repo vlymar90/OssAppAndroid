@@ -23,7 +23,7 @@ public class InputActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String number = intent.getStringExtra(EMAIL);
         TextView info = (TextView) findViewById(R.id.textViewInfo);
-        info.setText("Мы отправили 6-тизначный код " + EMAIL +
+        info.setText("Мы отправили 6-тизначный код на " + EMAIL +
                 ". "+ "Введите полученный код.");
     }
     /*Метод повторного запроса кода*/
@@ -32,24 +32,6 @@ public class InputActivity extends AppCompatActivity {
 
     }
 
-    /*Метод устанавливает на кнопку "таймер".
-     * Пока идёт время кнопка не активна */
-//    private void setTextButton() {
-//        new CountDownTimer(59000, 1000) {
-//            @Override
-//            public void onTick(long millisUntilFinished) {
-//                button.setText(String.format(textButton, millisUntilFinished/1000));
-//            }
-//            @Override
-//            public void onFinish() {
-//                button.setText("повторить");
-//                button.setEnabled(true);
-//            }
-//        }.start();
-//    }
-    /*Метод для подтверждения, введеного пользователем кода.
-     * Пока не реализован. Написаный код просто для тестовой навигации
-     * по приложению */
     public void sendReg(View view) {
         Intent intent = new Intent(this, RulesActivity.class);
         startActivity(intent);

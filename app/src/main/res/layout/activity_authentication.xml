@@ -11,6 +11,7 @@
         android:layout_width="297dp"
         android:layout_height="77dp"
         android:layout_marginTop="128dp"
+        android:textStyle="bold"
         android:text="@string/input_number"
         android:textAlignment="center"
         android:textColor="#121111"

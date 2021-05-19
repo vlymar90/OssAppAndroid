@@ -19,14 +19,18 @@ public class FightingStylesActivity extends AppCompatActivity {
     /*Метод - слушатель для всех кнопок. Меняет состояние кнопки*/
     public void selectStyle(View view) {
         Button button = (Button) view;
-        if (User.getInstance().getUserStyleList().size() != 3) {
-            if (UtilSelectStyle.selectStyle(button.getText().toString())) {
+        String nameButton = button.getText().toString();
+        if (!User.getInstance().getUserStyleList().containsKey(nameButton) ) {
+            if (User.getInstance().getUserStyleList().size() < 3)  {
+                User.getInstance().getUserStyleList().put(nameButton, null);
                 button.setTextColor(Color.WHITE);
                 button.setBackgroundColor(Color.BLUE);
-            } else {
-                button.setTextColor(Color.BLACK);
-                button.setBackgroundColor(Color.WHITE);
             }
+        }
+        else {
+            User.getInstance().getUserStyleList().remove(nameButton);
+            button.setTextColor(Color.BLACK);
+            button.setBackgroundColor(Color.WHITE);
         }
     }
 

@@ -112,20 +112,20 @@
             <Button
                 android:id="@+id/button16"
                 style="@style/buttonPrimary"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="88dp"
                 android:onClick="nextStage"
                 android:text="@string/resume"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.355"
+                app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/style11" />
 
             <Button
                 android:id="@+id/button6"
                 style="@style/buttonstyle"
-                android:onClick="selectStyle"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
+                android:onClick="selectStyle"
                 android:text="@string/style3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -133,9 +133,9 @@
             <Button
                 android:id="@+id/button7"
                 style="@style/buttonstyle"
-                android:onClick="selectStyle"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
+                android:onClick="selectStyle"
                 android:text="@string/style6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button6" />
