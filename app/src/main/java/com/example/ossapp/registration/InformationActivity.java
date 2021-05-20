@@ -44,7 +44,7 @@ public class InformationActivity extends AppCompatActivity {
             User.setNameAgeTelegram(nameUser.getText().toString(), age,
                     loginTelegram.getText().toString());
             if (User.getInstance().fullField()) {
-                Intent nextActivityIntent = new Intent(this, FightingStylesActivity.class);
+                Intent nextActivityIntent = new Intent(this, CountryActivity.class);
                 startActivity(nextActivityIntent);
             }
         } catch (NumberFormatException e) {

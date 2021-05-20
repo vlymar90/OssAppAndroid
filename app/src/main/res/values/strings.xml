@@ -57,4 +57,15 @@
     вашего аккаунта и мы отправим вам пароль.</string>
     <string name="recover">Восстановить пароль</string>
     <string name="new_password">Задайте пароль для вашего аккаунта</string>
+    <string-array name="city">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Ростов-на-Дону</item>
+        <item>Нижний Новгород</item>
+        <item>Тольятти</item>
+        <item>Владимир</item>
+        <item>Екатеринбург</item>
+        <item>Калининград</item>
+        <item>Воронеж</item>
+    </string-array>
 </resources>
