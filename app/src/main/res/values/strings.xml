@@ -2,16 +2,15 @@
     <string name="app_name">OssApp</string>
     <string name="resume">Продолжить</string>
     <string name="input_number">Зарегистрируйтесь в приложении</string>
-    <string name="avatar">Добавить свою фотографию</string>
     <string name="skip">Пропустить</string>
     <string name="back">Убрать фото</string>
     <string name="header1">Заполни информацию о себе</string>
     <string name="name">Введите ваше имя*</string>
     <string name="age">Введите ваш возраст*</string>
-    <string name="weight">Выберите весовую каткгорию*</string>
+    <string name="weight">Выберите весовую категорию*</string>
     <string name="hintAge">лет</string>
     <string name="hintWeight">кг</string>
-    <string name="header2">Выбери ваш вид единоборств
+    <string name="header2">Выберите ваш вид единоборств
         (максимум 3)</string>
     <string name="title_activity_fighting_styles">ScrollingActivity</string>
     <string name="style2">MMA</string>

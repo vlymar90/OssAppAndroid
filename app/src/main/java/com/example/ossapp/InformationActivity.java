@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import com.example.ossapp.User.User;
+
 public class InformationActivity extends AppCompatActivity {
     private EditText nameUser;
     private EditText ageUser;
@@ -19,11 +21,10 @@ public class InformationActivity extends AppCompatActivity {
     private Button heavy;
     private RadioButton male;
     private RadioButton female;
+    User user = new User();
     /*
     вес и пол надо будет тащить вместе с объектом User
      */
-    int weight;
-    int sex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,8 @@ public class InformationActivity extends AppCompatActivity {
         male = (RadioButton) findViewById(R.id.male);
         female = (RadioButton) findViewById(R.id.female);
 
+
+
     /*
     три метода выбора весовой категории
      */
@@ -44,7 +47,7 @@ public class InformationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 weightClick(light, medium, heavy);
-                weight = 1;
+                user.setUserWeight(1);
             }
         });
 
@@ -52,7 +55,7 @@ public class InformationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 weightClick(medium, light, heavy);
-                weight = 2;
+                user.setUserWeight(2);
             }
         });
 
@@ -61,7 +64,7 @@ public class InformationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 weightClick(heavy, medium, light);
-                weight = 3;
+                user.setUserWeight(3);
             }
         });
 
@@ -74,7 +77,7 @@ public class InformationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 male.setChecked(true);
                 female.setChecked(false);
-                sex = 1;
+                user.setSexUser(1);
             }
         });
 
@@ -83,7 +86,7 @@ public class InformationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 male.setChecked(false);
                 female.setChecked(true);
-                sex = 2;
+                user.setSexUser(2);
             }
         });
 
@@ -96,6 +99,8 @@ public class InformationActivity extends AppCompatActivity {
      * и открытие нового окна*/
     public void resumeInfo(View view) {
         Context context = InformationActivity.this;
+        user.setUserName(nameUser.getText().toString());
+        user.setUserAge (Integer.parseInt(ageUser.getText().toString()));
         Intent nextActivityIntent = new Intent(context, FightingStylesActivity.class);
         startActivity(nextActivityIntent);
     }
@@ -111,11 +116,4 @@ public class InformationActivity extends AppCompatActivity {
         heavy.setBackgroundColor(Color.WHITE);
         heavy.setTextColor(Color.BLACK);
     }
-
-//    public void setSexMen(View view) {
-//
-//    }
-//
-//    public void setSexWoman(View view) {
-//    }
 }

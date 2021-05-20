@@ -32,7 +32,7 @@ public class User {
     private Map<String, String> userStyleList = new HashMap<>();
 
 
-    private User(){};
+    public User(){};
 
     public static User getInstance() {
         if(instance == null) {
