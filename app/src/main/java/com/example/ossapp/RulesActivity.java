@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ossapp.loginpages.EntryActivity;
+import com.example.ossapp.registration.InformationActivity;
+
 public class RulesActivity extends AppCompatActivity {
 
     private Button accept;
@@ -22,7 +25,7 @@ public class RulesActivity extends AppCompatActivity {
     метод принятия и продолжения
      */
     public void accept(View view) {
-        Intent intent = new Intent(this, InformationActivity.class);
+        Intent intent = new Intent(this, EntryActivity.class);
         startActivity(intent);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.ossapp;
+package com.example.ossapp.registration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import com.example.ossapp.R;
 import com.example.ossapp.User.User;
 
 public class InformationActivity extends AppCompatActivity {

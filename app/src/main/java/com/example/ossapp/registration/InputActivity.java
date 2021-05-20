@@ -1,4 +1,4 @@
-package com.example.ossapp;
+package com.example.ossapp.registration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.ossapp.R;
+import com.example.ossapp.RulesActivity;
 
 public class InputActivity extends AppCompatActivity {
     public static final String EMAIL = "message";
@@ -33,7 +36,7 @@ public class InputActivity extends AppCompatActivity {
     }
 
     public void sendReg(View view) {
-        Intent intent = new Intent(this, RulesActivity.class);
+        Intent intent = new Intent(this, InformationActivity.class);
         startActivity(intent);
     }
 }

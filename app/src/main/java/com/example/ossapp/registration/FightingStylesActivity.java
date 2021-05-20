@@ -1,4 +1,4 @@
-package com.example.ossapp;
+package com.example.ossapp.registration;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.ossapp.R;
 import com.example.ossapp.User.User;
 import com.example.ossapp.util.UtilSelectStyle;
 
