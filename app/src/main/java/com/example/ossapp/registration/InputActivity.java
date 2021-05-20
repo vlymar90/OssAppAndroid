@@ -36,7 +36,7 @@ public class InputActivity extends AppCompatActivity {
     }
 
     public void sendReg(View view) {
-        Intent intent = new Intent(this, InformationActivity.class);
+        Intent intent = new Intent(this, PasswordActivity.class);
         startActivity(intent);
     }
 }

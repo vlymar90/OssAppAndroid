@@ -8,140 +8,162 @@
 
     <TextView
         android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/header"
+        android:layout_marginTop="46dp"
         android:text="@string/addprofil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView5"
-        style="@style/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/nameUser"
         style="@style/inputtextProfil"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="Введите ваше имя*"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <TextView
-        android:id="@+id/textView6"
-        style="@style/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/age"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameUser" />
 
     <EditText
         android:id="@+id/ageUser"
         style="@style/inputtextProfil"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:hint="@string/hintAge"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/nameUser" />
+
+    <EditText
+        android:id="@+id/userNickTelegramm"
+        style="@style/inputtextProfil"
+        android:layout_marginTop="24dp"
+        android:hint="@string/hintnickTelegramm"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageUser" />
+
 
     <TextView
         android:id="@+id/textView7"
         style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:text="@string/weight"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ageUser" />
-
-    <LinearLayout
-        android:id="@+id/firstLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/textView7">
-
-        <Button
-            android:id="@+id/light"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="light"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            />
+        app:layout_constraintTop_toBottomOf="@+id/userNickTelegramm" />
 
 
-        <Button
-            android:id="@+id/medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="medium"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            />
+    <Button
+        android:onClick="selectWeight"
+        android:id="@+id/light"
+        style="@style/ageButton"
+        android:text="Лёгкий"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-        <Button
-            android:id="@+id/heavy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="heavy"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            />
+    <Button
+        android:id="@+id/medium"
+        style="@style/ageButton"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="selectWeight"
+        android:text="средний"
+        app:layout_constraintStart_toEndOf="@+id/light"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    </LinearLayout>
-
+    <Button
+        android:id="@+id/heavy"
+        style="@style/ageButton"
+        android:layout_margin="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:onClick="selectWeight"
+        android:text="тяжелый"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/medium"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <RadioButton
-        android:id="@+id/male"
+        android:onClick="selectSex"
+        android:id="@+id/muskul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="male"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintTop_toBottomOf="@id/firstLine" />
+        android:layout_marginTop="12dp"
+        android:text="мужской"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <RadioButton
+        android:onClick="selectSex"
         android:id="@+id/female"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="female"
+        android:text="женский"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/male" />
+        app:layout_constraintTop_toBottomOf="@+id/muskul" />
 
     <Button
         android:id="@+id/button3"
         style="@style/buttonPrimary"
-        android:layout_marginTop="40dp"
         android:onClick="resumeInfo"
         android:text="@string/resume"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/female"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <TextView
+        style="@style/text"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Ваш пол*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="27dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toEndOf="@+id/muskul"
+        app:layout_constraintTop_toBottomOf="@+id/medium"
+        app:srcCompat="@drawable/men" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toEndOf="@+id/female"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/woman" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,6 +28,7 @@ public class User {
     private int userAge;
     private int userWeight;
     private int sexUser;
+    private String loginTelegram;
 
     private Map<String, String> userStyleList = new HashMap<>();
 
@@ -40,6 +41,20 @@ public class User {
             return instance;
         }
         return instance;
+    }
+
+    public static void setNameAgeTelegram(String name,Integer age, String telegram) {
+        instance.setUserName(name);
+        instance.setUserAge(age);
+        instance.setLoginTelegram(telegram);
+    }
+
+    public boolean fullField() {
+        if(!userName.isEmpty() && userAge !=0 && sexUser !=0
+        && userWeight !=0) {
+            return true;
+        }
+        return false;
     }
 
     public String getUserPhone() {
@@ -66,6 +81,10 @@ public class User {
         return userStyleList;
     }
 
+    public String getLoginTelegram() {
+        return loginTelegram;
+    }
+
     public static void setInstance(User instance) {
         User.instance = instance;
     }
@@ -88,5 +107,9 @@ public class User {
 
     public void setSexUser(int sexUser) {
         this.sexUser = sexUser;
+    }
+
+    public void setLoginTelegram(String loginTelegram) {
+        this.loginTelegram = loginTelegram;
     }
 }

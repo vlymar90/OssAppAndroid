@@ -10,7 +10,6 @@ import android.widget.Button;
 
 import com.example.ossapp.R;
 import com.example.ossapp.User.User;
-import com.example.ossapp.util.UtilSelectStyle;
 
 public class FightingStylesActivity extends AppCompatActivity {
     @Override

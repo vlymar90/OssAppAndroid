@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OssApp">
-        <activity android:name=".loginpages.PasswordRecoverActivity"></activity>
+        <activity android:name=".registration.PasswordActivity"></activity>
+        <activity android:name=".loginpages.PasswordRecoverActivity" />
         <activity android:name=".loginpages.LoginPageActivity" />
         <activity android:name=".loginpages.EntryActivity" />
         <activity android:name=".registration.FightingStylesActivity" />
