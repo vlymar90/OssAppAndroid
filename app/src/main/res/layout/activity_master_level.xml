@@ -106,7 +106,7 @@
             android:id="@+id/labeltwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:text="text"
             android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.088"
@@ -168,6 +168,7 @@
         app:layout_constraintTop_toBottomOf="@+id/selecttwo">
 
         <TextView
+            android:text="text"
             android:id="@+id/labeltree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -225,14 +226,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:onClick="nextActivity"
         android:id="@+id/button24"
         style="@style/buttonPrimary"
+        android:layout_marginBottom="28dp"
+        android:onClick="nextActivity"
         android:text="@string/resume"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selecttree" />
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

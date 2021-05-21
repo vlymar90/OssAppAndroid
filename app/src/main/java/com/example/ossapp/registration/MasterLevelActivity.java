@@ -2,6 +2,8 @@ package com.example.ossapp.registration;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.example.ossapp.R;
 import com.example.ossapp.User.User;
+import com.example.ossapp.loginpages.LoginPageActivity;
 import com.example.ossapp.util.StyleListSelect;
 import java.util.ArrayList;
 
@@ -58,20 +61,25 @@ public class MasterLevelActivity extends AppCompatActivity {
     }
 
     public void nextActivity(View view) {
+        int size = User.getInstance().getUserStyleList().size();
         System.out.println(User.getInstance().getUserStyleList().size());
+        Intent loginPage = new Intent(this, LoginPageActivity.class);
+        startActivity(loginPage);
     }
 
     private void setCountLayout() {
         switch (listStyle.size()) {
             case 1:
                 labelOne.setText(listStyle.get(0));
-                selectTwo.setVisibility(View.INVISIBLE);
-                selectTree.setVisibility(View.INVISIBLE);
+                selectTwo.setVisibility(View.GONE);
+                selectTree.setVisibility(View.GONE);
+//                selectTwo.setVisibility(View.INVISIBLE);
+//                selectTree.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 labelOne.setText(listStyle.get(0));
                 labelTwo.setText(listStyle.get(1));
-                selectTree.setVisibility(View.INVISIBLE);
+                selectTree.setVisibility(View.GONE);
                 break;
             case 3:
                 labelOne.setText(listStyle.get(0));
