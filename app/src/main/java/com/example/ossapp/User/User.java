@@ -30,7 +30,7 @@ public class User {
     private int sexUser;
     private String loginTelegram;
 
-    private Map<String, String> userStyleList = new HashMap<>();
+    private Map<Integer, Integer> userStyleList = new HashMap<>();
 
 
     public User(){};
@@ -77,7 +77,7 @@ public class User {
         return sexUser;
     }
 
-    public Map<String, String> getUserStyleList() {
+    public Map<Integer, Integer> getUserStyleList() {
         return userStyleList;
     }
 
