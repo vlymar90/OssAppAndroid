@@ -68,6 +68,8 @@
         <item>Калининград</item>
         <item>Воронеж</item>
     </string-array>
+    <string name="partner">Спарринг-партнёры</string>
+    <string name="city">Город</string>
     <string name="level_master">Уровень владения</string>
     <string name="select_level">Выберите уровень владения</string>
 </resources>

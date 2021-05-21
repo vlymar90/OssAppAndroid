@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.ossapp.R;
+import com.example.ossapp.SearchActivity;
 
 public class LoginPageActivity extends AppCompatActivity {
     private EditText userEmail;
@@ -23,7 +24,8 @@ public class LoginPageActivity extends AppCompatActivity {
     }
     //Открывает главную страницу приложения
     public void inputAccount(View view) {
-
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
     }
      //Чистит строку с email
     public void clearEmailText(View view) {
