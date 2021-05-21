@@ -9,15 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OssApp">
+<<<<<<< HEAD
         <activity android:name=".loginpages.PasswordRecoverActivity"/>
+=======
+        <activity android:name=".registration.MasterLevelActivity"></activity>
+        <activity android:name=".registration.CountryActivity" />
+        <activity android:name=".registration.PasswordActivity" />
+        <activity android:name=".loginpages.PasswordRecoverActivity" />
+>>>>>>> master
         <activity android:name=".loginpages.LoginPageActivity" />
         <activity android:name=".loginpages.EntryActivity" />
-        <activity android:name=".FightingStylesActivity" />
-        <activity android:name=".InformationActivity" />
+        <activity android:name=".registration.FightingStylesActivity" />
+        <activity android:name=".registration.InformationActivity" />
         <activity android:name=".RulesActivity" />
+<<<<<<< HEAD
         <activity android:name=".InputActivity" />
         <activity android:name=".AuthenticationActivity" />
         <activity android:name=".SearchActivity" />
+=======
+        <activity android:name=".registration.InputActivity" />
+        <activity android:name=".registration.AuthenticationActivity" />
+>>>>>>> master
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FightingStylesActivity">
+    tools:context=".registration.FightingStylesActivity">
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,9 +112,11 @@
             <Button
                 android:id="@+id/button16"
                 style="@style/buttonPrimary"
-                android:layout_marginTop="88dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="20dp"
                 android:onClick="nextStage"
                 android:text="@string/resume"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"

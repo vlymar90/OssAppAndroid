@@ -4,16 +4,13 @@
     <string name="input_number">Зарегистрируйтесь в приложении</string>
     <string name="skip">Пропустить</string>
     <string name="back">Убрать фото</string>
-    <string name="header1">Заполни информацию о себе</string>
-    <string name="name">Введите ваше имя*</string>
-    <string name="age">Введите ваш возраст*</string>
-    <string name="weight">Выберите весовую категорию*</string>
-    <string name="hintAge">лет</string>
-    <string name="hintWeight">кг</string>
+    <string name="weight">Выберите свой вес*</string>
+    <string name="hintAge">Введите ваш возраст*</string>
+    <string name="hintnickTelegramm">Введите ваш ник в Telegram*</string>
     <string name="header2">Выберите ваш вид единоборств
         (максимум 3)</string>
     <string name="title_activity_fighting_styles">ScrollingActivity</string>
-    <string name="style2">MMA</string>
+    <string name="style2">ММА</string>
     <string name="style3">БЖЖ</string>
     <string name="style5">Кикбоксинг</string>
     <string name="style6">Карате</string>
@@ -45,7 +42,7 @@
         "приложений."</string>
     <string name="rulesname">OssApp защищает вашу конфиденциальность</string>
     <string name="rulesbutton">Принять и продолжить</string>
-    <string name="addprofil">Заполнение профиля</string>
+    <string name="addprofil">Профиль</string>
     <string name="info_entry">Нажимая «Создать аккаунт» или «Войти»,
         вы соглашаетесь с нашими Условиями. Узнайте, как мы обрабатываем
         ваши данные, ознакомившись с </string>
@@ -59,6 +56,23 @@
     <string name="info_password">Мы поможем вам его восстановить и опять войти в приложение. Просто введите Email
     вашего аккаунта и мы отправим вам пароль.</string>
     <string name="recover">Восстановить пароль</string>
+<<<<<<< HEAD
     <string name="partner">Спарринг партнёры</string>
     <string name="city">Город:</string>
+=======
+    <string name="new_password">Задайте пароль для вашего аккаунта</string>
+    <string-array name="city">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Ростов-на-Дону</item>
+        <item>Нижний Новгород</item>
+        <item>Тольятти</item>
+        <item>Владимир</item>
+        <item>Екатеринбург</item>
+        <item>Калининград</item>
+        <item>Воронеж</item>
+    </string-array>
+    <string name="level_master">Уровень владения</string>
+    <string name="select_level">Выберите уровень владения</string>
+>>>>>>> master
 </resources>
