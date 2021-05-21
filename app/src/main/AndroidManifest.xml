@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OssApp">
-        <activity android:name=".loginpages.PasswordRecoverActivity"></activity>
+        <activity android:name=".loginpages.PasswordRecoverActivity"/>
         <activity android:name=".loginpages.LoginPageActivity" />
         <activity android:name=".loginpages.EntryActivity" />
         <activity android:name=".FightingStylesActivity" />
@@ -17,6 +17,7 @@
         <activity android:name=".RulesActivity" />
         <activity android:name=".InputActivity" />
         <activity android:name=".AuthenticationActivity" />
+        <activity android:name=".SearchActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

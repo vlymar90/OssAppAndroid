@@ -34,11 +34,10 @@ public class FightingStylesActivity extends AppCompatActivity {
         }
     }
 
-
     public void nextStage(View view) {
         if (User.getInstance().getUserStyleList().size() != 0) {
-            Intent intent = new Intent(this, null);
+            Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
-        }
+       }
     }
 }

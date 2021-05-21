@@ -99,8 +99,8 @@ public class InformationActivity extends AppCompatActivity {
      * и открытие нового окна*/
     public void resumeInfo(View view) {
         Context context = InformationActivity.this;
-        user.setUserName(nameUser.getText().toString());
-        user.setUserAge (Integer.parseInt(ageUser.getText().toString()));
+        //user.setUserName(nameUser.getText().toString());
+        //user.setUserAge (Integer.parseInt(ageUser.getText().toString()));
         Intent nextActivityIntent = new Intent(context, FightingStylesActivity.class);
         startActivity(nextActivityIntent);
     }

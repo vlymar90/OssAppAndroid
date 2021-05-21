@@ -59,4 +59,6 @@
     <string name="info_password">Мы поможем вам его восстановить и опять войти в приложение. Просто введите Email
     вашего аккаунта и мы отправим вам пароль.</string>
     <string name="recover">Восстановить пароль</string>
+    <string name="partner">Спарринг партнёры</string>
+    <string name="city">Город:</string>
 </resources>
