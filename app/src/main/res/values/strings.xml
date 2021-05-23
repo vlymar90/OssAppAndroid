@@ -70,6 +70,21 @@
     </string-array>
     <string name="partner">Спарринг-партнёры</string>
     <string name="city">Город</string>
+    <string name="filters">Фильтры</string>
+    <string name="cancel">Сбросить</string>
+    <string name="fighting_styles">Вид единоборств</string>
     <string name="level_master">Уровень владения</string>
     <string name="select_level">Выберите уровень владения</string>
+    <string name="rookie">Начинающий</string>
+    <string name="medium">Средний</string>
+    <string name="advanced">Продвинутый</string>
+    <string name="professional">Профессионал</string>
+    <string name="sex">Пол спарринг партнёра</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="light">Лёгкий</string>
+    <string name="half_heavy">Средний</string>
+    <string name="heavy">Тяжёлый</string>
+    <string name="age_of_partners">Возрастной диапазон</string>
+    <string name="show_result">Показать результаты</string>
 </resources>

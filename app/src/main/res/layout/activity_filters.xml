@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".FiltersActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/header"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/filters"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="cancelFilter"
+                android:text="@string/cancel"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="20dp"
+                android:layout_marginLeft="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="backWithoutFilters"
+                android:src="@drawable/close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/fighting_styles" />
+
+        <com.google.android.material.internal.FlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            app:itemSpacing="10dp">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style2"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style3" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style5" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style6" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style7" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style8" />
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style9" />
+
+            <Button
+                android:id="@+id/button8"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style10" />
+
+            <Button
+                android:id="@+id/button9"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/style11" />
+
+        </com.google.android.material.internal.FlowLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/level_master" />
+
+        <com.google.android.material.internal.FlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            app:itemSpacing="10dp">
+
+            <Button
+                android:id="@+id/button10"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/rookie" />
+
+            <Button
+                android:id="@+id/button11"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/medium" />
+
+            <Button
+                android:id="@+id/button12"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/advanced" />
+
+            <Button
+                android:id="@+id/button13"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/professional" />
+
+        </com.google.android.material.internal.FlowLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/sex" />
+
+        <com.google.android.material.internal.FlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            app:itemSpacing="10dp">
+
+            <Button
+                android:id="@+id/button14"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/male" />
+
+            <Button
+                android:id="@+id/button15"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/female" />
+
+        </com.google.android.material.internal.FlowLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/sex" />
+
+        <com.google.android.material.internal.FlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            app:itemSpacing="10dp">
+
+            <Button
+                android:id="@+id/button16"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/light" />
+
+            <Button
+                android:id="@+id/button17"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/half_heavy" />
+
+            <Button
+                android:id="@+id/button18"
+                style="@style/filters_button"
+                android:onClick="buttonClick"
+                android:text="@string/heavy" />
+
+        </com.google.android.material.internal.FlowLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/age_of_partners" />
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/slider"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:valueFrom="15"
+            android:valueTo="67"
+            android:min="15"
+            android:stepSize="1"
+            android:max="67"
+            />
+
+        <Button
+            android:id="@+id/show"
+            style="@style/buttonPrimary"
+            android:layout_marginBottom="28dp"
+            android:onClick="nextActivity"
+            android:text="@string/show_result"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+</ScrollView>

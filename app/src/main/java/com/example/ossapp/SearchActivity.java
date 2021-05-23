@@ -50,8 +50,8 @@ public class SearchActivity extends AppCompatActivity {
     к фильтрам
      */
     public void filtered(View view) {
-      //  Intent intent = new Intent(this, null);
-      //  startActivity(intent);
+        Intent intent = new Intent(this, FiltersActivity.class);
+        startActivity(intent);
     }
 
     /*
