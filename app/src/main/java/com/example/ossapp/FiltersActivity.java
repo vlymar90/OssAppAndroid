@@ -51,6 +51,7 @@ public class FiltersActivity extends AppCompatActivity {
         ageSlider.setValues(18f, 38f);
 
 
+
        /* button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
