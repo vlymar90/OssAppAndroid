@@ -22,6 +22,8 @@ public class SearchActivity extends AppCompatActivity {
     private RecyclerView partners;
     private FightersList fightersList;
     private ImageView filter;
+    private TextView cityName;
+    private String city;
 
 
     @Override
@@ -31,8 +33,13 @@ public class SearchActivity extends AppCompatActivity {
 
         partners = findViewById(R.id.partners);
         filter = findViewById(R.id.filter);
+        cityName = findViewById(R.id.city_name);
 
-        /*
+        Intent cityFilter = getIntent();
+        if(cityFilter.hasExtra("city"))
+            cityName.setText(getIntent().getStringExtra("city"));
+
+        /*from
         создание списка бойцов
         нужно доработать чтобы принимать запросы из базы
          */
@@ -50,8 +57,8 @@ public class SearchActivity extends AppCompatActivity {
     к фильтрам
      */
     public void filtered(View view) {
-      //  Intent intent = new Intent(this, null);
-      //  startActivity(intent);
+        Intent intent = new Intent(this, FiltersActivity.class);
+        startActivity(intent);
     }
 
     /*
@@ -82,7 +89,7 @@ public class SearchActivity extends AppCompatActivity {
     выбор города
      */
     public void chooseCity(View view) {
-      //  Intent intent = new Intent(this, null);
-       // startActivity(intent);
+        Intent intent = new Intent(this, FilterCityActivity.class);
+        startActivity(intent);
     }
 }

@@ -85,10 +85,10 @@ public class InformationActivity extends AppCompatActivity {
             case "Лёгкий" :
                 weightClick(1, medium, heavy, weightButton);
                 break;
-            case "средний" :
+            case "Средний" :
                 weightClick(2, light, heavy, weightButton);
                 break;
-            case "тяжелый" :
+            case "Тяжёлый" :
                 weightClick(3, light, medium, weightButton);
                 break;
         }
