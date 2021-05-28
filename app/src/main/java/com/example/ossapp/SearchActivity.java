@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ossapp.User.User;
+import com.example.ossapp.registration.CountryActivity;
 import com.example.ossapp.util.FightersList;
 
 
@@ -89,7 +90,8 @@ public class SearchActivity extends AppCompatActivity {
     выбор города
      */
     public void chooseCity(View view) {
-        Intent intent = new Intent(this, FilterCityActivity.class);
+        Intent intent = new Intent(this, CountryActivity.class);
+        intent.putExtra("id", 2);
         startActivity(intent);
     }
 }
