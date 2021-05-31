@@ -45,6 +45,7 @@ public class InformationActivity extends AppCompatActivity {
                     loginTelegram.getText().toString());
             if (User.getInstance().fullField()) {
                 Intent nextActivityIntent = new Intent(this, CountryActivity.class);
+                nextActivityIntent.putExtra("id", 1);
                 startActivity(nextActivityIntent);
             }
         } catch (NumberFormatException e) {
