@@ -1,29 +1,29 @@
 
 package com.example.ossapp;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-        import android.content.Intent;
-        import android.net.Uri;
-        import android.os.AsyncTask;
-        import android.os.Bundle;
-        import android.text.Editable;
-        import android.text.TextWatcher;
-        import android.view.View;
-        import android.widget.AdapterView;
-        import android.widget.ArrayAdapter;
-        import android.widget.EditText;
-        import android.widget.ListView;
-        import android.widget.TextView;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
 
-        import java.io.IOException;
-        import java.io.InputStream;
-        import java.net.HttpURLConnection;
-        import java.net.MalformedURLException;
-        import java.net.URL;
-        import java.net.URLConnection;
-        import java.util.ArrayList;
-        import java.util.Scanner;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class FilterCityActivity extends AppCompatActivity {
     private EditText city;
@@ -40,10 +40,10 @@ public class FilterCityActivity extends AppCompatActivity {
         listCity = getResources().getStringArray(R.array.city);
         listViewCity = (ListView) findViewById(R.id.listCity);
 
-        city.addTextChangedListener(new TextWatcher(){
+        city.addTextChangedListener(new TextWatcher() {
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count){
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String inputText = s.toString();
                 setListView(inputText);
             }
@@ -52,6 +52,7 @@ public class FilterCityActivity extends AppCompatActivity {
             public void afterTextChanged(Editable editable) {
                 AsyncTask.execute(new Runnable() {
                     URL url = null;
+
                     @Override
                     public void run() {
                         Uri newCity = Uri.parse("localhost").buildUpon()
@@ -81,7 +82,8 @@ public class FilterCityActivity extends AppCompatActivity {
 
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
         });
 
         listViewCity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -98,8 +100,8 @@ public class FilterCityActivity extends AppCompatActivity {
 
     private void setListView(String text) {
         ArrayList<String> listSelectCity = new ArrayList<>();
-        for(int i = 0; i < listCity.length; i++) {
-            if(listCity[i].startsWith(text)) {
+        for (int i = 0; i < listCity.length; i++) {
+            if (listCity[i].startsWith(text)) {
                 listSelectCity.add(listCity[i]);
             }
         }
