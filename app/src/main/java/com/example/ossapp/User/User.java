@@ -28,6 +28,7 @@ public class User {
     private int userAge;
     private int userWeight;
     private int sexUser;
+    private long city;
     private String loginTelegram;
 
     private Map<Integer, Integer> userStyleList = new HashMap<>();
@@ -77,12 +78,20 @@ public class User {
         return sexUser;
     }
 
+    public long getCity() {
+        return city;
+    }
+
     public Map<Integer, Integer> getUserStyleList() {
         return userStyleList;
     }
 
     public String getLoginTelegram() {
         return loginTelegram;
+    }
+
+    public void setCity(long city) {
+        this.city = city;
     }
 
     public static void setInstance(User instance) {
