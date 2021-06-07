@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.ossapp.R;
+import com.example.ossapp.dto.UserDto;
 
 public class AuthenticationActivity extends AppCompatActivity {
     private EditText emailUser;
@@ -22,6 +23,7 @@ public class AuthenticationActivity extends AppCompatActivity {
         //Здесь логика отпраки номере телефона на сервер....
         Intent intent = new Intent(this, InputActivity.class);
         intent.putExtra(InputActivity.EMAIL, emailUser.getText().toString());
+        UserDto.getInstance().setEmail(emailUser.toString());
         startActivity(intent);
 
     }

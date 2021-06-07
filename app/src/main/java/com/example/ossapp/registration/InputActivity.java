@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.ossapp.R;
 import com.example.ossapp.RulesActivity;
+import com.example.ossapp.dto.UserDto;
 
 public class InputActivity extends AppCompatActivity {
     public static final String EMAIL = "message";

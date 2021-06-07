@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.example.ossapp.R;
 import com.example.ossapp.SearchActivity;
-import com.example.ossapp.User.User;
+import com.example.ossapp.dto.UserDto;
 import com.example.ossapp.dto.CityDto;
 import com.example.ossapp.requests.CityRequest;
 import com.example.ossapp.requests.MyRetrofit;
@@ -81,7 +81,7 @@ public class CountryActivity extends AppCompatActivity {
                 city.setText(strText);
                 for (int i = 0; i < cityDtoList.size(); i++) {
                     if(cityDtoList.get(i).getName().equals(strText)) {
-                        User.getInstance().setCity(cityDtoList.get(i).getId());
+                        UserDto.getInstance().setCity(cityDtoList.get(i).getId());
                     }
 
                 }

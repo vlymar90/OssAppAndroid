@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import com.example.ossapp.R;
-import com.example.ossapp.User.User;
+import com.example.ossapp.dto.UserDto;
 
 public class InformationActivity extends AppCompatActivity {
     private EditText nameUser;
@@ -41,9 +41,9 @@ public class InformationActivity extends AppCompatActivity {
     public void resumeInfo(View view) {
         try {
             int age = Integer.parseInt(ageUser.getText().toString());
-            User.setNameAgeTelegram(nameUser.getText().toString(), age,
+            UserDto.setNameAgeTelegram(nameUser.getText().toString(), age,
                     loginTelegram.getText().toString());
-            if (User.getInstance().fullField()) {
+            if (UserDto.getInstance().fullField()) {
                 Intent nextActivityIntent = new Intent(this, CountryActivity.class);
                 nextActivityIntent.putExtra("id", 1);
                 startActivity(nextActivityIntent);
@@ -57,7 +57,7 @@ public class InformationActivity extends AppCompatActivity {
     метод выбора весовой категории с изменением цвета кнопок
      */
     public void weightClick(int weight, Button nonSelectButton1, Button nonSelectButton2, Button selectButton) {
-        User.getInstance().setUserWeight(weight);
+        UserDto.getInstance().setUserWeight(weight);
         selectButton.setBackgroundColor(Color.BLUE);
         selectButton.setTextColor(Color.WHITE);
         nonSelectButton1.setTextColor(Color.BLACK);
@@ -71,12 +71,12 @@ public class InformationActivity extends AppCompatActivity {
         if(button.getText().toString().equals("мужской")) {
             button.setChecked(true);
             female.setChecked(false);
-            User.getInstance().setSexUser(1);
+            UserDto.getInstance().setSexUser(1);
         }
         else {
             male.setChecked(false);
             button.setChecked(true);
-            User.getInstance().setSexUser(2);
+            UserDto.getInstance().setSexUser(2);
         }
     }
     //Метод обработчик выбора весовой категории

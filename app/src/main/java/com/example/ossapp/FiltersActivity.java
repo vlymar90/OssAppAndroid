@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ossapp.User.User;
 import com.google.android.material.slider.RangeSlider;
 
 import java.util.ArrayList;

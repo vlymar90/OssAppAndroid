@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.ossapp.R;
+import com.example.ossapp.dto.UserDto;
 
 public class PasswordActivity extends AppCompatActivity {
     private EditText userPassword;
@@ -25,7 +26,7 @@ public class PasswordActivity extends AppCompatActivity {
 
     public void nextActivity(View view) {
         if(userPassword.length() > 7) {
-            //логика сохранения пароля
+            UserDto.getInstance().setPassword(userPassword.toString());
             Intent infoIntent = new Intent(this, InformationActivity.class);
             startActivity(infoIntent);
         }

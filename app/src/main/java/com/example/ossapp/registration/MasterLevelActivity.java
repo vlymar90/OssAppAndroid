@@ -10,7 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import com.example.ossapp.R;
-import com.example.ossapp.User.User;
+import com.example.ossapp.dto.StyleLevelDto;
+import com.example.ossapp.dto.UserDto;
 import com.example.ossapp.loginpages.LoginPageActivity;
 import com.example.ossapp.util.StyleListSelect;
 import java.util.ArrayList;
@@ -61,8 +62,6 @@ public class MasterLevelActivity extends AppCompatActivity {
     }
 
     public void nextActivity(View view) {
-        int size = User.getInstance().getUserStyleList().size();
-        System.out.println(User.getInstance().getUserStyleList().size());
         Intent loginPage = new Intent(this, LoginPageActivity.class);
         startActivity(loginPage);
     }
@@ -73,8 +72,6 @@ public class MasterLevelActivity extends AppCompatActivity {
                 labelOne.setText(listStyle.get(0));
                 selectTwo.setVisibility(View.GONE);
                 selectTree.setVisibility(View.GONE);
-//                selectTwo.setVisibility(View.INVISIBLE);
-//                selectTree.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 labelOne.setText(listStyle.get(0));
@@ -111,7 +108,7 @@ public class MasterLevelActivity extends AppCompatActivity {
         for (int i = 0; i < buttons.length; i++) {
             if (buttons[i].equals(button)) {
                 int level = getNumberLevel(button.getText().toString());
-                User.getInstance().getUserStyleList().put(numberStyle, level);
+                UserDto.getInstance().getStyleLevelList().add(new StyleLevelDto(numberStyle, level));
                 button.setBackgroundColor(Color.BLUE);
                 button.setTextColor(Color.WHITE);
             }
