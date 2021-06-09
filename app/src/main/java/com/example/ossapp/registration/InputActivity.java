@@ -4,15 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.ossapp.R;
-import com.example.ossapp.RulesActivity;
-import com.example.ossapp.dto.UserDto;
 
 public class InputActivity extends AppCompatActivity {
     public static final String EMAIL = "message";

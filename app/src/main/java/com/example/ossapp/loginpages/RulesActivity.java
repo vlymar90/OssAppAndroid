@@ -1,4 +1,4 @@
-package com.example.ossapp;
+package com.example.ossapp.loginpages;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ossapp.R;
 import com.example.ossapp.loginpages.EntryActivity;
 import com.example.ossapp.registration.InformationActivity;
 

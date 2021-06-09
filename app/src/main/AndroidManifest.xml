@@ -18,7 +18,7 @@
         <activity android:name=".loginpages.EntryActivity" />
         <activity android:name=".registration.FightingStylesActivity" />
         <activity android:name=".registration.InformationActivity" />
-        <activity android:name=".RulesActivity" />
+        <activity android:name=".loginpages.RulesActivity" />
         <activity android:name=".registration.InputActivity" />
         <activity android:name=".registration.AuthenticationActivity" />
         <activity android:name=".SearchActivity" />

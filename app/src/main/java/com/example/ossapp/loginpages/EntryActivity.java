@@ -8,7 +8,6 @@ import android.view.View;
 
 import com.example.ossapp.registration.AuthenticationActivity;
 import com.example.ossapp.R;
-import com.example.ossapp.RulesActivity;
 
 public class EntryActivity extends AppCompatActivity {
 
