@@ -1,6 +1,7 @@
 package com.example.ossapp.util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,11 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ossapp.R;
+import com.example.ossapp.dto.UserDto;
+import com.example.ossapp.dto.UserResponseDto;
+import com.example.ossapp.registration.CountryActivity;
+
+import java.util.List;
 
 /*
 класс список бойцов
@@ -17,26 +23,31 @@ public class FightersList extends RecyclerView.Adapter<FightersList.FighterViewH
 
     private static int numberOfHolders;
     private int numberOfFighters;
+    private UserResponseDto userResponseDto;
+    List<UserResponseDto> fighters;
 
-
-    public FightersList(int numberFighters) {
-        numberOfFighters = numberFighters;
+    /*
+    принимает список запрошенных бойцов
+     */
+    public FightersList(List<UserResponseDto> list) {
+        fighters = list;
+        numberOfFighters = list.size();
         numberOfHolders = 0;
     }
 
     /*
-    создание объекта боец
+    создание карточки бойца
      */
     @Override
     public FighterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         int layoutId = R.layout.fighter;
 
+
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(layoutId, parent, false);
 
         FighterViewHolder fighterHolder = new FighterViewHolder(view);
-        fighterHolder.viewHolderNumber.setText("Fighter number " + numberOfHolders);
 
         numberOfHolders++;
 
@@ -59,25 +70,51 @@ public class FightersList extends RecyclerView.Adapter<FightersList.FighterViewH
         return numberOfFighters;
     }
 
-
     /*
-    класс списка одного бойца
+    содержимое карточки бойца одного бойца
      */
     class FighterViewHolder extends RecyclerView.ViewHolder {
-
-        TextView fighterNumber;
+        TextView fighterName;
+        TextView fighterAge;
+        TextView fighterCity;
+        TextView fighterWeight;
+        TextView fighterStyle;
         TextView viewHolderNumber;
 
         public FighterViewHolder(View itemView) {
             super(itemView);
 
-            fighterNumber = itemView.findViewById(R.id.number_fighter);
+            fighterName = itemView.findViewById(R.id.name_fighter);
+            fighterAge = itemView.findViewById(R.id.age_fighter);
+            fighterCity = itemView.findViewById(R.id.city_fighter);
+            fighterWeight = itemView.findViewById(R.id.weight_fighter);
+            fighterStyle = itemView.findViewById(R.id.style_fighter);
             viewHolderNumber = itemView.findViewById(R.id.view_holder_number);
-
         }
 
+        /*
+        связь содержимого с карточкой
+         */
         void bind(int listIndex) {
-            fighterNumber.setText(String.valueOf(listIndex));
+            userResponseDto = fighters.get(listIndex);
+            fighterName.setText(userResponseDto.getName() + ",");
+            fighterWeight.setText(String.valueOf(userResponseDto.getUserWeight()));
+            fighterAge.setText(String.valueOf(userResponseDto.getUserAge()));
+            fighterCity.setText("Город " + userResponseDto.getCity());
+            //           for (StyleLevelDto sld : userDto.getStyleLevelList()){
+            //               fighterStyle.append(sld.getStyle()+" ");
+            //           }
         }
+
+/*
+метод для перехода в карточку бойца, тащит объект userResponseDto
+ */
+        public void lookAtFighter() {
+            //Intent intent = new Intent(this, FighterCardActivity.class);
+           // intent.putExtra("dto", userResponseDto);
+          //  startActivity(intent);
+        }
+
     }
+
 }

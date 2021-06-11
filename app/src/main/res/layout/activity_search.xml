@@ -18,16 +18,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-        android:id="@+id/textView"
-        style="@style/header"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="@string/partner"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/textView"
+            style="@style/header"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/partner"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/filter"
@@ -53,6 +53,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/city"
         android:textSize="18dp"
+        android:onClick="chooseCity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/head" />
 
@@ -62,24 +63,24 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="Moscow"
         android:clickable="true"
         android:focusable="true"
         android:onClick="chooseCity"
+        android:text="Moscow"
         android:textColor="@color/blue"
         android:textSize="18dp"
         app:layout_constraintStart_toEndOf="@id/city"
         app:layout_constraintTop_toBottomOf="@id/head" />
 
     <!-- список бойцов -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/partners"
-            android:layout_width="match_parent"
-            android:layout_height="450dp"
-            app:layout_constraintBottom_toTopOf="@id/footer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/city"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/partners"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city" />
 
     <LinearLayout
         android:id="@+id/footer"
