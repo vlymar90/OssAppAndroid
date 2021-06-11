@@ -1,10 +1,10 @@
 package com.example.ossapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ossapp.loginpages.EntryActivity;
 

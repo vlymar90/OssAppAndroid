@@ -79,6 +79,7 @@ public class CountryActivity extends AppCompatActivity {
                 TextView textView = (TextView) itemClicked;
                 String strText = textView.getText().toString(); // получаем текст нажатого элемента
                 city.setText(strText);
+                wantedCity = strText;
                 for (int i = 0; i < cityDtoList.size(); i++) {
                     if(cityDtoList.get(i).getName().equals(strText)) {
                         UserDto.getInstance().setCity(cityDtoList.get(i).getId());

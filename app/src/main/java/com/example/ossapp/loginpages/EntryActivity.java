@@ -1,13 +1,13 @@
 package com.example.ossapp.loginpages;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.ossapp.registration.AuthenticationActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.ossapp.R;
+//import com.example.ossapp.registration.AuthenticationActivity;
 
 public class EntryActivity extends AppCompatActivity {
 
@@ -29,7 +29,7 @@ public class EntryActivity extends AppCompatActivity {
     }
    //Открывает страницу регистрации
     public void createAccount(View view) {
-        Intent auth = new Intent(this, AuthenticationActivity.class);
-        startActivity(auth);
+     //   Intent auth = new Intent(this, AuthenticationActivity.class );
+    //   startActivity(auth);
     }
 }
