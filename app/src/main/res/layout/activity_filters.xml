@@ -81,56 +81,56 @@
             <Button
                 android:id="@+id/button1"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style2"
                 />
 
             <Button
                 android:id="@+id/button2"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style3" />
 
             <Button
                 android:id="@+id/button3"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style5" />
 
             <Button
                 android:id="@+id/button4"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style6" />
 
             <Button
                 android:id="@+id/button5"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style7" />
 
             <Button
                 android:id="@+id/button6"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style8" />
 
             <Button
                 android:id="@+id/button7"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style9" />
 
             <Button
                 android:id="@+id/button8"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style10" />
 
             <Button
                 android:id="@+id/button9"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonStyleClick"
                 android:text="@string/style11" />
 
         </com.google.android.material.internal.FlowLayout>
@@ -222,7 +222,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/sex" />
+            android:text="@string/weight_of_partner" />
 
         <com.google.android.material.internal.FlowLayout
             android:layout_width="match_parent"

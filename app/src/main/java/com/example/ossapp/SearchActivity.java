@@ -36,6 +36,7 @@ public class SearchActivity extends AppCompatActivity {
     private TextView cityName;
     private String city;
     private List<UserResponseDto> listOfFighters;
+    private List<Long> styles;
     UserResponseDto userDto1;
     UserResponseDto userDto2;
     UserResponseDto userDto3;
@@ -50,10 +51,20 @@ public class SearchActivity extends AppCompatActivity {
         filter = findViewById(R.id.filter);
         cityName = findViewById(R.id.city_name);
 
-        Intent cityFilter = getIntent();
-        if (cityFilter.hasExtra("city")) {
+        Intent filter = getIntent();
+        // получение города
+        if (filter.hasExtra("city")) {
             city = getIntent().getStringExtra("city");
             cityName.setText(city);
+        }
+        // получение информации от фильтров
+        if (filter.hasExtra("style")) {
+            for (Long st : getIntent().getLongArrayExtra("style")) {
+                styles.add(st);
+            }
+            userDto1.setStyleLevelList(styles);
+            userDto2.setStyleLevelList(styles);
+            userDto3.setStyleLevelList(styles);
         }
 
 

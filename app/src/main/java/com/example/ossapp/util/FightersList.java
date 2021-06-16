@@ -93,7 +93,7 @@ public class FightersList extends RecyclerView.Adapter<FightersList.FighterViewH
         }
 
         /*
-        связь содержимого с карточкой
+        связь содержимого с карточкой бойца
          */
         void bind(int listIndex) {
             userResponseDto = fighters.get(listIndex);
@@ -101,18 +101,22 @@ public class FightersList extends RecyclerView.Adapter<FightersList.FighterViewH
             fighterWeight.setText(String.valueOf(userResponseDto.getUserWeight()));
             fighterAge.setText(String.valueOf(userResponseDto.getUserAge()));
             fighterCity.setText("Город " + userResponseDto.getCity());
+            if (!userResponseDto.getStyleLevelList().isEmpty())
+                fighterStyle.setText("Стиль " + userResponseDto.getStyleLevelList().toString()); // под вопросом
+
+            // с этим пока не ясно
             //           for (StyleLevelDto sld : userDto.getStyleLevelList()){
             //               fighterStyle.append(sld.getStyle()+" ");
             //           }
         }
 
-/*
-метод для перехода в карточку бойца, тащит объект userResponseDto
- */
+        /*
+        метод для перехода в карточку бойца, тащит объект userResponseDto
+         */
         public void lookAtFighter() {
             //Intent intent = new Intent(this, FighterCardActivity.class);
-           // intent.putExtra("dto", userResponseDto);
-          //  startActivity(intent);
+            // intent.putExtra("dto", userResponseDto);
+            //  startActivity(intent);
         }
 
     }
