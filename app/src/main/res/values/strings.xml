@@ -80,6 +80,7 @@
     <string name="advanced">Продвинутый</string>
     <string name="professional">Профессионал</string>
     <string name="sex">Пол спарринг партнёра</string>
+    <string name="weight_of_partner">Вес спарринг партнёра</string>
     <string name="male">Мужской</string>
     <string name="female">Женский</string>
     <string name="light">Лёгкий</string>

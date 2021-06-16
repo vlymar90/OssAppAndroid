@@ -28,7 +28,7 @@ import retrofit2.Response;
 public class CountryActivity extends AppCompatActivity {
     private EditText city;
     private ListView listViewCity;
-    private int acivityId;
+    private int activityId;
     private String wantedCity;
     private List<CityDto> cityDtoList;
 
@@ -40,7 +40,7 @@ public class CountryActivity extends AppCompatActivity {
         listViewCity = (ListView) findViewById(R.id.listCity);
         Intent cityFilter = getIntent();
         if (cityFilter.hasExtra("id"))
-            acivityId = getIntent().getIntExtra("id", 0);
+            activityId = getIntent().getIntExtra("id", 0);
 
         city.addTextChangedListener(new TextWatcher() {
 
@@ -79,14 +79,13 @@ public class CountryActivity extends AppCompatActivity {
                 TextView textView = (TextView) itemClicked;
                 String strText = textView.getText().toString(); // получаем текст нажатого элемента
                 city.setText(strText);
-                wantedCity = strText;
                 for (int i = 0; i < cityDtoList.size(); i++) {
                     if(cityDtoList.get(i).getName().equals(strText)) {
                         UserDto.getInstance().setCity(cityDtoList.get(i).getId());
                     }
 
                 }
-//                wantedCity = strText;   Это пока под вопросом
+               wantedCity = strText;   // Это пока под вопросом
             }
         });
     }
@@ -100,10 +99,10 @@ public class CountryActivity extends AppCompatActivity {
     }
 
     public void nextActivity(View view) {
-        if (acivityId == 1) {
+        if (activityId == 1) {
             Intent style = new Intent(this, FightingStylesActivity.class);
             startActivity(style);
-        } else if (acivityId == 2) {
+        } else if (activityId == 2) {
             Intent search = new Intent(this, SearchActivity.class);
             search.putExtra("city", wantedCity);
             startActivity(search);
