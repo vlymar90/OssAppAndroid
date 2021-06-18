@@ -112,7 +112,7 @@
             <Button
                 android:id="@+id/button16"
                 style="@style/buttonPrimary"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:onClick="nextStage"
                 android:text="@string/resume"
@@ -120,7 +120,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/style11" />
+                app:layout_constraintTop_toBottomOf="@+id/button26" />
 
             <Button
                 android:id="@+id/button6"
@@ -141,6 +141,26 @@
                 android:text="@string/style6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+            <Button
+                android:id="@+id/button25"
+                style="@style/buttonstyle"
+                android:onClick="selectStyle"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:text="Бокс"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/style10" />
+
+            <Button
+                android:id="@+id/button26"
+                style="@style/buttonstyle"
+                android:onClick="selectStyle"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:text="Муай-тай"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/style11" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

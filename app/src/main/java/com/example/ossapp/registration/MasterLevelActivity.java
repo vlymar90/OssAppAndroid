@@ -13,6 +13,8 @@ import com.example.ossapp.R;
 import com.example.ossapp.dto.StyleLevelDto;
 import com.example.ossapp.dto.UserDto;
 import com.example.ossapp.loginpages.LoginPageActivity;
+import com.example.ossapp.requests.MyRetrofit;
+import com.example.ossapp.requests.UserRequest;
 import com.example.ossapp.util.StyleListSelect;
 import java.util.ArrayList;
 
@@ -62,6 +64,8 @@ public class MasterLevelActivity extends AppCompatActivity {
     }
 
     public void nextActivity(View view) {
+        UserRequest userRequest = MyRetrofit.getInstance().create(UserRequest.class);
+        userRequest.saveProfile(UserDto.getInstance());
         Intent loginPage = new Intent(this, LoginPageActivity.class);
         startActivity(loginPage);
     }
@@ -106,7 +110,7 @@ public class MasterLevelActivity extends AppCompatActivity {
     private void selectLevel(View view, Button[] buttons, int numberStyle) {
         Button button = (Button) view;
         for (int i = 0; i < buttons.length; i++) {
-            if (buttons[i].equals(button)) {
+            if (buttons[i].getText().equals(button.getText())) {
                 int level = getNumberLevel(button.getText().toString());
                 UserDto.getInstance().getStyleLevelList().add(new StyleLevelDto(numberStyle, level));
                 button.setBackgroundColor(Color.BLUE);

@@ -16,6 +16,8 @@ public class StyleListSelect {
             case "Дзюдо" : return  7;
             case "Вольная борьба" : return  8;
             case "Грэпплинг" : return 9;
+            case "Бокс" : return 10;
+            case "Муай-тай" : return 11;
         }
         return 0;
     }

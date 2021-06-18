@@ -1,5 +1,6 @@
 package com.example.ossapp.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*Этот класс отвечает за сбор данных о пользователе.
@@ -20,7 +21,7 @@ public class UserDto {
     private int userAge;
     private long cityId;
     private String about;
-    private List<StyleLevelDto> styleLevelList;
+    private List<StyleLevelDto> styleLevelList = new ArrayList<>();
 
 
 
