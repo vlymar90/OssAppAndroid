@@ -157,25 +157,25 @@
             <Button
                 android:id="@+id/button10"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonLevelClick"
                 android:text="@string/rookie" />
 
             <Button
                 android:id="@+id/button11"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonLevelClick"
                 android:text="@string/medium" />
 
             <Button
                 android:id="@+id/button12"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonLevelClick"
                 android:text="@string/advanced" />
 
             <Button
                 android:id="@+id/button13"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonLevelClick"
                 android:text="@string/professional" />
 
         </com.google.android.material.internal.FlowLayout>

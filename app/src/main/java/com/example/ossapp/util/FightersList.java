@@ -101,13 +101,7 @@ public class FightersList extends RecyclerView.Adapter<FightersList.FighterViewH
             fighterWeight.setText(String.valueOf(userResponseDto.getUserWeight()));
             fighterAge.setText(String.valueOf(userResponseDto.getUserAge()));
             fighterCity.setText("Город " + userResponseDto.getCity());
-            if (!userResponseDto.getStyleLevelList().isEmpty())
-                fighterStyle.setText("Стиль " + userResponseDto.getStyleLevelList().toString()); // под вопросом
-
-            // с этим пока не ясно
-            //           for (StyleLevelDto sld : userDto.getStyleLevelList()){
-            //               fighterStyle.append(sld.getStyle()+" ");
-            //           }
+            fighterStyle.setText(userResponseDto.getStyle() + " " + userResponseDto.getLevel()); //пока в стринге
         }
 
         /*

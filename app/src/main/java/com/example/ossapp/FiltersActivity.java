@@ -22,6 +22,7 @@ public class FiltersActivity extends AppCompatActivity {
 
     private TextView cancel;
     private ImageView back;
+
     private Button mma;
     private Button bzhzh;
     private Button kickboxing;
@@ -31,36 +32,48 @@ public class FiltersActivity extends AppCompatActivity {
     private Button judo;
     private Button wrestling;
     private Button grappling;
+
     private Button rookie;
     private Button medium;
     private Button advanced;
     private Button professional;
+
     private Button male;
     private Button female;
+
     private Button light;
     private Button halfHeavy;
     private Button heavy;
+
     private RangeSlider ageSlider;
+
     private ArrayList<Button> buttons;
 
+    private String city;
     private int weight;
     private int sex;
-    private int age;
-    private long style;
-    private long level;
-    private long[] styles = new long[3];
-    private List list = new LinkedList<Long>();
-    int count = 0;
+    private float ageMin;
+    private float ageMax;
+    private String level;
+    private String style;
+    private List<Button> styles;
+    private List<Button> levels;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filters);
 
-        buttons = new ArrayList<>();
+        // приходит город из списка бойцов
+        city = getIntent().getStringExtra("city");
+
+        buttons = new ArrayList<>(); //хранит все кнопки, для очистки фильтров
+        styles = new ArrayList<>(); //хранит кнопки стилей, чтобы они потом деактивировались
+        levels = new ArrayList<>(); //хранит кнопки уровней, чтобы они потом деактивировались
 
         ageSlider = findViewById(R.id.slider);
-        ageSlider.setValues(18f, 38f);
+        ageSlider.setValues(20f, 50f); // выбор возраста
 
         mma = findViewById(R.id.button1);
         bzhzh = findViewById(R.id.button2);
@@ -71,40 +84,18 @@ public class FiltersActivity extends AppCompatActivity {
         judo = findViewById(R.id.button7);
         wrestling = findViewById(R.id.button8);
         grappling = findViewById(R.id.button9);
+
         rookie = findViewById(R.id.button10);
         medium = findViewById(R.id.button11);
         advanced = findViewById(R.id.button12);
         professional = findViewById(R.id.button13);
+
         male = findViewById(R.id.button14);
         female = findViewById(R.id.button15);
+
         light = findViewById(R.id.button16);
         halfHeavy = findViewById(R.id.button17);
         heavy = findViewById(R.id.button18);
-    }
-
-    public void buttonStyleClick(View view) {
-        Button button = (Button) view;
-        if (count <= 3) {
-            if (mma.equals(view)) {
-                style = 1;
-                buttonClick(view);
-                choosingStyle(button, style);
-            } else if (bzhzh.equals(view)) {
-                style = 2;
-                buttonClick(view);
-                choosingStyle(button, style);
-            } else if (kickboxing.equals(view)) {
-                style = 3;
-                buttonClick(view);
-                choosingStyle(button, style);
-            } else if (karate.equals(view)) {
-                style = 4;
-                buttonClick(view);
-                choosingStyle(button, style);
-            }
-        } else {
-            return;
-        }
     }
 
     /*
@@ -129,11 +120,17 @@ public class FiltersActivity extends AppCompatActivity {
     }
 
     /*
-    назад с фильтрами
+    назад с фильтрами. Еще не закончено
      */
     public void nextActivity(View view) {
+        ageMin = ageSlider.getValues().get(0);
+        ageMax = ageSlider.getValues().get(ageSlider.getValues().size() - 1);
         Intent intent = new Intent(this, SearchActivity.class);
-        intent.putExtra("style", list.toArray());
+        intent.putExtra("style", style);
+        intent.putExtra("level", level);
+        intent.putExtra("city", city);
+        intent.putExtra("ageMin", ageMin);
+        intent.putExtra("ageMax", ageMax);
         startActivity(intent);
     }
 
@@ -151,20 +148,36 @@ public class FiltersActivity extends AppCompatActivity {
             selectButton.setBackgroundColor(Color.WHITE);
             selectButton.setTextColor(Color.BLACK);
             selectButton.setSelected(false);
+            buttons.remove(selectButton);
         }
     }
 
-    public void choosingStyle(Button button, Long style) {
-        if (button.isPressed()) {
-            list.add(style);
-            count++;
-        } else if (!button.isPressed()) {
-            for (int i = 0; i < list.size(); i++) {
-                if (list.get(i) == style) {
-                    list.remove(list.get(i));
-                    count--;
-                }
+    //нажатие на кнопку любого стиля
+    public void buttonStyleClick(View view) {
+        Button button = (Button) view;
+        buttonChooseClick(view, styles);
+        style = button.getText().toString();
+    }
+
+    //нажатие на кнопку выбора уровня
+    public void buttonLevelClick(View view) {
+        Button button = (Button) view;
+        buttonChooseClick(view, levels);
+        level = button.getText().toString();
+    }
+
+    // общий метод выбора только одного элемента
+    public void buttonChooseClick(View view, List<Button> views) {
+        Button button = (Button) view;
+        for (Button bt : views) {
+            if (bt.isSelected()) {
+                bt.setBackgroundColor(Color.WHITE);
+                bt.setTextColor(Color.BLACK);
+                bt.setSelected(false);
+                buttons.remove(bt);
             }
         }
+        views.add(button);
+        buttonClick(view);
     }
 }

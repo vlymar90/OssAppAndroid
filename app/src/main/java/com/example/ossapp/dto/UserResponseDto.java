@@ -15,7 +15,9 @@ public class UserResponseDto implements Serializable {
     private int userAge;
     private String city;
     private String about;
-    private List<Long> styleLevelList;
+    private String style; // пока в стринге
+    private String level; // пока в стринге
+
 
     public UserResponseDto(){};
 
@@ -41,6 +43,9 @@ public class UserResponseDto implements Serializable {
         return false;
     }
 
+    public String getLevel() {
+        return level;
+    }
     public String getName() {
         return name;
     }
@@ -73,8 +78,12 @@ public class UserResponseDto implements Serializable {
         return about;
     }
 
-    public List<Long> getStyleLevelList() {
-        return styleLevelList;
+    public String getStyle() {
+        return style;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     public static void setInstance(UserDto instance) {
@@ -113,7 +122,7 @@ public class UserResponseDto implements Serializable {
         this.about = about;
     }
 
-    public void setStyleLevelList(List<Long> styleLevelList) {
-        this.styleLevelList = styleLevelList;
+    public void setStyle(String style) {
+        this.style = style;
     }
 }
