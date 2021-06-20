@@ -23,7 +23,7 @@ public class AuthenticationActivity extends AppCompatActivity {
         //Здесь логика отпраки номере телефона на сервер....
         Intent intent = new Intent(this, InputActivity.class);
         intent.putExtra(InputActivity.EMAIL, emailUser.getText().toString());
-        UserDto.getInstance().setEmail(emailUser.toString());
+        UserDto.getInstance().setEmail(emailUser.getText().toString());
         startActivity(intent);
 
     }

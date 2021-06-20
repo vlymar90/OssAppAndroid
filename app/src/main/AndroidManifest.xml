@@ -3,6 +3,7 @@
     package="com.example.ossapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OssApp">
-        <activity android:name=".registration.MasterLevelActivity"></activity>
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:label="@string/title_activity_profile"></activity>
+        <activity android:name=".registration.MasterLevelActivity" />
         <activity android:name=".registration.CountryActivity" />
         <activity android:name=".registration.PasswordActivity" />
         <activity android:name=".loginpages.PasswordRecoverActivity" />
@@ -22,7 +26,7 @@
         <activity android:name=".registration.InputActivity" />
         <activity android:name=".registration.AuthenticationActivity" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".FiltersActivity"/>
+        <activity android:name=".FiltersActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

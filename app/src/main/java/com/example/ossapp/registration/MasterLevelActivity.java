@@ -16,7 +16,13 @@ import com.example.ossapp.loginpages.LoginPageActivity;
 import com.example.ossapp.requests.MyRetrofit;
 import com.example.ossapp.requests.UserRequest;
 import com.example.ossapp.util.StyleListSelect;
+
+import java.io.IOException;
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MasterLevelActivity extends AppCompatActivity {
     private ConstraintLayout selectTwo;
@@ -65,7 +71,17 @@ public class MasterLevelActivity extends AppCompatActivity {
 
     public void nextActivity(View view) {
         UserRequest userRequest = MyRetrofit.getInstance().create(UserRequest.class);
-        userRequest.saveProfile(UserDto.getInstance());
+        System.out.println(UserDto.getInstance().getStyleLevelList().size());
+        Call<UserDto> call = userRequest.saveProfile(UserDto.getInstance());
+        call.enqueue(new Callback<UserDto>() {
+            @Override
+            public void onResponse(Call<UserDto> call, Response<UserDto> response) {}
+
+            @Override
+            public void onFailure(Call<UserDto> call, Throwable t) {
+                System.out.println(t.getMessage());
+            }
+        });
         Intent loginPage = new Intent(this, LoginPageActivity.class);
         startActivity(loginPage);
     }

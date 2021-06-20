@@ -71,12 +71,12 @@ public class InformationActivity extends AppCompatActivity {
         if(button.getText().toString().equals("мужской")) {
             button.setChecked(true);
             female.setChecked(false);
-            UserDto.getInstance().setSexUser(1);
+            UserDto.getInstance().setSexUser(2);
         }
         else {
             male.setChecked(false);
             button.setChecked(true);
-            UserDto.getInstance().setSexUser(2);
+            UserDto.getInstance().setSexUser(1);
         }
     }
     //Метод обработчик выбора весовой категории

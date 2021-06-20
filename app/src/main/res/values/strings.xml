@@ -88,4 +88,8 @@
     <string name="heavy">Тяжёлый</string>
     <string name="age_of_partners">Возрастной диапазон</string>
     <string name="show_result">Показать результаты</string>
+    <string name="title_activity_profile">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

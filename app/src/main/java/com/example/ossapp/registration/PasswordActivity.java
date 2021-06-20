@@ -26,7 +26,7 @@ public class PasswordActivity extends AppCompatActivity {
 
     public void nextActivity(View view) {
         if(userPassword.length() > 7) {
-            UserDto.getInstance().setPassword(userPassword.toString());
+            UserDto.getInstance().setPassword(userPassword.getText().toString());
             Intent infoIntent = new Intent(this, InformationActivity.class);
             startActivity(infoIntent);
         }
