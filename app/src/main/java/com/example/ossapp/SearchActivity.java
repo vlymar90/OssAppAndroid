@@ -36,7 +36,10 @@ public class SearchActivity extends AppCompatActivity {
     private TextView cityName;
     private String city;
     private List<UserResponseDto> listOfFighters;
-    private List<Long> styles;
+    private String style;
+    private String level;
+    private int ageMin;
+    private int ageMax;
     UserResponseDto userDto1;
     UserResponseDto userDto2;
     UserResponseDto userDto3;
@@ -57,35 +60,42 @@ public class SearchActivity extends AppCompatActivity {
             city = getIntent().getStringExtra("city");
             cityName.setText(city);
         }
-        // получение информации от фильтров
-        if (filter.hasExtra("style")) {
-            for (Long st : getIntent().getLongArrayExtra("style")) {
-                styles.add(st);
-            }
-            userDto1.setStyleLevelList(styles);
-            userDto2.setStyleLevelList(styles);
-            userDto3.setStyleLevelList(styles);
+        // получение информации от фильтров стиль, уровень, возраст макс. и мин.
+        if (filter.hasExtra("style"))
+            style = getIntent().getStringExtra("style");
+        if (filter.hasExtra("level"))
+            level = getIntent().getStringExtra("level");
+        if (filter.hasExtra("ageMin")) {
+            ageMin = (int) getIntent().getFloatExtra("ageMin", 20);
+            ageMax = (int) getIntent().getFloatExtra("ageMax", 50);
         }
+
 
 
         // бойцы для проверки которых мы получим из базы
         userDto1 = new UserResponseDto();
         userDto1.setName("Ван Дам");
-        userDto1.setUserAge(35);
+        userDto1.setUserAge(ageMin);
         userDto1.setUserWeight(80);
         userDto1.setCity(city);
+        userDto1.setStyle(style);
+        userDto1.setLevel(level);
 
         userDto2 = new UserResponseDto();
         userDto2.setName("Ли");
-        userDto2.setUserAge(29);
+        userDto2.setUserAge(ageMax);
         userDto2.setUserWeight(65);
         userDto2.setCity(city);
+        userDto2.setStyle(style);
+        userDto2.setLevel(level);
 
         userDto3 = new UserResponseDto();
         userDto3.setName("Норрис");
-        userDto3.setUserAge(34);
+        userDto3.setUserAge(ageMax);
         userDto3.setUserWeight(70);
         userDto3.setCity(city);
+        userDto3.setStyle(style);
+        userDto3.setLevel(level);
 
         listOfFighters = new LinkedList<>();
         /*
@@ -111,14 +121,15 @@ public class SearchActivity extends AppCompatActivity {
          */
         fightersList = new FightersList(listOfFighters);
         partners.setAdapter(fightersList);
-
     }
 
     /*
     к фильтрам
      */
     public void filtered(View view) {
+        // город тоже идет в фильтры, чтобы вернуть потом
         Intent intent = new Intent(this, FiltersActivity.class);
+        intent.putExtra("city", city);
         startActivity(intent);
     }
 
