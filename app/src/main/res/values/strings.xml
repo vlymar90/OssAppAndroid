@@ -19,6 +19,8 @@
     <string name="style9">Дзюдо</string>
     <string name="style10">Вольная борьба</string>
     <string name="style11">Грэпплинг</string>
+    <string name="style12">Бокс</string>
+    <string name="style13">Муай-Тай</string>
     <string name="confirmation">Подтвердите email</string>
     <string name="rules">
         "OssApp использует файлы cookie и личные данные"
@@ -68,7 +70,8 @@
         <item>Калининград</item>
         <item>Воронеж</item>
     </string-array>
-    <string name="partner">Спарринг-партнёры</string>
+    <string name="partners">Спарринг-партнёры</string>
+    <string name="partner">Спарринг-партнёр</string>
     <string name="city">Город</string>
     <string name="filters">Фильтры</string>
     <string name="cancel">Сбросить</string>
@@ -81,15 +84,18 @@
     <string name="professional">Профессионал</string>
     <string name="sex">Пол спарринг партнёра</string>
     <string name="weight_of_partner">Вес спарринг партнёра</string>
+    <string name="just_weight">Вес спарринг партнёра</string>
     <string name="male">Мужской</string>
     <string name="female">Женский</string>
     <string name="light">Лёгкий</string>
     <string name="half_heavy">Средний</string>
     <string name="heavy">Тяжёлый</string>
+    <string name="age">Возраст</string>
     <string name="age_of_partners">Возрастной диапазон</string>
     <string name="show_result">Показать результаты</string>
     <string name="title_activity_profile">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="send_query">ОТПРАВИТЬ ЗАПРОС</string>
 </resources>

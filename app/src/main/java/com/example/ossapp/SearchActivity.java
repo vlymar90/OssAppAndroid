@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,9 +31,9 @@ import java.util.ListIterator;
 
 public class SearchActivity extends AppCompatActivity {
 
+    LinearLayout fighter;
     private RecyclerView partners;
     private FightersList fightersList;
-    private ImageView filter;
     private TextView cityName;
     private String city;
     private List<UserResponseDto> listOfFighters;
@@ -40,6 +41,10 @@ public class SearchActivity extends AppCompatActivity {
     private String level;
     private int ageMin;
     private int ageMax;
+    private int sexId;
+    private int weightId;
+
+    //временные бойцы
     UserResponseDto userDto1;
     UserResponseDto userDto2;
     UserResponseDto userDto3;
@@ -51,8 +56,8 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         partners = findViewById(R.id.partners);
-        filter = findViewById(R.id.filter);
         cityName = findViewById(R.id.city_name);
+        fighter = findViewById(R.id.fighter);
 
         Intent filter = getIntent();
         // получение города
@@ -60,7 +65,7 @@ public class SearchActivity extends AppCompatActivity {
             city = getIntent().getStringExtra("city");
             cityName.setText(city);
         }
-        // получение информации от фильтров стиль, уровень, возраст макс. и мин.
+        // получение информации от фильтров стиль, уровень, возраст макс. и мин. и т.д
         if (filter.hasExtra("style"))
             style = getIntent().getStringExtra("style");
         if (filter.hasExtra("level"))
@@ -70,32 +75,52 @@ public class SearchActivity extends AppCompatActivity {
             ageMax = (int) getIntent().getFloatExtra("ageMax", 50);
         }
 
+        // получаем пол и переводим его в int
+        if (filter.hasExtra("sex")){
+            if (getIntent().getStringExtra("sex").equals("Мужской"))
+                sexId = 1;
+            if (getIntent().getStringExtra("sex").equals("Женский"))
+                sexId = 2;
+        }
+
+        // получаем вес и переводим его в int
+        if (filter.hasExtra("weight")) {
+            if (getIntent().getStringExtra("weight").equals("Лёгкий"))
+                weightId = 1;
+            if (getIntent().getStringExtra("weight").equals("Средний"))
+                weightId = 2;
+            if (getIntent().getStringExtra("weight").equals("Тяжёлый"))
+                weightId = 3;
+        }
 
 
         // бойцы для проверки которых мы получим из базы
         userDto1 = new UserResponseDto();
         userDto1.setName("Ван Дам");
         userDto1.setUserAge(ageMin);
-        userDto1.setUserWeight(80);
         userDto1.setCity(city);
         userDto1.setStyle(style);
         userDto1.setLevel(level);
+        userDto1.setSexUser(sexId);
+        userDto1.setUserWeight(weightId);
 
         userDto2 = new UserResponseDto();
         userDto2.setName("Ли");
         userDto2.setUserAge(ageMax);
-        userDto2.setUserWeight(65);
         userDto2.setCity(city);
         userDto2.setStyle(style);
         userDto2.setLevel(level);
+        userDto2.setSexUser(sexId);
+        userDto2.setUserWeight(weightId);
 
         userDto3 = new UserResponseDto();
         userDto3.setName("Норрис");
         userDto3.setUserAge(ageMax);
-        userDto3.setUserWeight(70);
         userDto3.setCity(city);
         userDto3.setStyle(style);
         userDto3.setLevel(level);
+        userDto3.setSexUser(sexId);
+        userDto3.setUserWeight(weightId);
 
         listOfFighters = new LinkedList<>();
         /*
@@ -107,7 +132,6 @@ public class SearchActivity extends AppCompatActivity {
         listOfFighters.add(userDto1);
         listOfFighters.add(userDto2);
         listOfFighters.add(userDto3);
-
 
         /*
         создание Recycler View
@@ -163,6 +187,13 @@ public class SearchActivity extends AppCompatActivity {
     public void chooseCity(View view) {
         Intent intent = new Intent(this, CountryActivity.class);
         intent.putExtra("id", 2);
+        startActivity(intent);
+    }
+
+    // переход на карточку бойца. не реализован
+    public void lookAtFighter(View view){
+        Intent intent = new Intent(this, PartnerActivity.class);
+        // intent.putExtra("dto", userResponseDto);
         startActivity(intent);
     }
 }
