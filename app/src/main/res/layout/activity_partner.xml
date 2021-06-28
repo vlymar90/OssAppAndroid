@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_grey"
-    tools:context=".SearchActivity">
-
+    tools:context=".PartnerActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/head"
@@ -17,70 +16,93 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/back_to_list"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="backToList"
+            android:src="@drawable/vector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/textView"
             style="@style/header"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="@string/partners"
+            android:text="@string/partner"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/filter"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="20dp"
-            android:layout_marginRight="15dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="filtered"
-            android:src="@drawable/filter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/city"
-        android:textSize="18dp"
-        android:onClick="chooseCity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/head" />
-
-    <TextView
-        android:id="@+id/city_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="chooseCity"
-        android:text="Moscow"
-        android:textColor="@color/blue"
-        android:textSize="18dp"
-        app:layout_constraintStart_toEndOf="@id/city"
-        app:layout_constraintTop_toBottomOf="@id/head" />
-
-    <!-- список бойцов -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/partners"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/head"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/partners_name"
+            android:textSize="25dp"
+            android:text="Capo"
+            android:layout_margin="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/partners_city"
+            android:text="@string/city"
+            android:layout_margin="20dp"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/partners_age"
+            android:text="@string/age"
+            android:layout_margin="20dp"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/partners_weight"
+            android:text="@string/just_weight"
+            android:layout_margin="20dp"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/filters_button"
+            android:id="@+id/partners_style_level"
+            android:text="@string/level_master"
+            android:layout_margin="20dp"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/buttonPrimary"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:text="@string/send_query"
         app:layout_constraintBottom_toTopOf="@id/footer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/city" />
+        />
 
     <LinearLayout
         android:id="@+id/footer"
@@ -97,10 +119,10 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="toQueries"
-                android:text="Queries"
                 android:clickable="true"
+                android:onClick="toQueries"
                 android:src="@drawable/request"
+                android:text="Queries"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -109,8 +131,8 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:onClick="search"
-                android:text="Partners"
                 android:src="@drawable/partners"
+                android:text="Partners"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -121,8 +143,8 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:onClick="toProfile"
-                android:text="Profile"
                 android:src="@drawable/request"
+                android:text="Profile"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

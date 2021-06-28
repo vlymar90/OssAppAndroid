@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ossapp.PartnerActivity;
 import com.example.ossapp.R;
 import com.example.ossapp.dto.UserDto;
 import com.example.ossapp.dto.UserResponseDto;
@@ -71,7 +72,7 @@ public class FightersList extends RecyclerView.Adapter<FightersList.FighterViewH
     }
 
     /*
-    содержимое карточки бойца одного бойца
+    содержимое карточки одного бойца
      */
     class FighterViewHolder extends RecyclerView.ViewHolder {
         TextView fighterName;
@@ -83,7 +84,6 @@ public class FightersList extends RecyclerView.Adapter<FightersList.FighterViewH
 
         public FighterViewHolder(View itemView) {
             super(itemView);
-
             fighterName = itemView.findViewById(R.id.name_fighter);
             fighterAge = itemView.findViewById(R.id.age_fighter);
             fighterCity = itemView.findViewById(R.id.city_fighter);
@@ -101,24 +101,7 @@ public class FightersList extends RecyclerView.Adapter<FightersList.FighterViewH
             fighterWeight.setText(String.valueOf(userResponseDto.getUserWeight()));
             fighterAge.setText(String.valueOf(userResponseDto.getUserAge()));
             fighterCity.setText("Город " + userResponseDto.getCity());
-            if (!userResponseDto.getStyleLevelList().isEmpty())
-                fighterStyle.setText("Стиль " + userResponseDto.getStyleLevelList().toString()); // под вопросом
-
-            // с этим пока не ясно
-            //           for (StyleLevelDto sld : userDto.getStyleLevelList()){
-            //               fighterStyle.append(sld.getStyle()+" ");
-            //           }
+            fighterStyle.setText(userResponseDto.getStyle() + " " + userResponseDto.getLevel()); //пока в стринге
         }
-
-        /*
-        метод для перехода в карточку бойца, тащит объект userResponseDto
-         */
-        public void lookAtFighter() {
-            //Intent intent = new Intent(this, FighterCardActivity.class);
-            // intent.putExtra("dto", userResponseDto);
-            //  startActivity(intent);
-        }
-
     }
-
 }

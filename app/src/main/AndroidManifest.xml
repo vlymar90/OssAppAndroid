@@ -27,6 +27,7 @@
         <activity android:name=".registration.AuthenticationActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".FiltersActivity" />
+        <activity android:name=".PartnerActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

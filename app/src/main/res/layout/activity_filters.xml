@@ -9,8 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -79,11 +79,16 @@
             app:itemSpacing="10dp">
 
             <Button
+                android:id="@+id/button0"
+                style="@style/filters_button"
+                android:onClick="buttonStyleClick"
+                android:text="@string/style12" />
+
+            <Button
                 android:id="@+id/button1"
                 style="@style/filters_button"
                 android:onClick="buttonStyleClick"
-                android:text="@string/style2"
-                />
+                android:text="@string/style2" />
 
             <Button
                 android:id="@+id/button2"
@@ -133,6 +138,12 @@
                 android:onClick="buttonStyleClick"
                 android:text="@string/style11" />
 
+            <Button
+                android:id="@+id/button20"
+                style="@style/filters_button"
+                android:onClick="buttonStyleClick"
+                android:text="@string/style13" />
+
         </com.google.android.material.internal.FlowLayout>
 
         <View
@@ -157,25 +168,25 @@
             <Button
                 android:id="@+id/button10"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonLevelClick"
                 android:text="@string/rookie" />
 
             <Button
                 android:id="@+id/button11"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonLevelClick"
                 android:text="@string/medium" />
 
             <Button
                 android:id="@+id/button12"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonLevelClick"
                 android:text="@string/advanced" />
 
             <Button
                 android:id="@+id/button13"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonLevelClick"
                 android:text="@string/professional" />
 
         </com.google.android.material.internal.FlowLayout>
@@ -202,13 +213,13 @@
             <Button
                 android:id="@+id/button14"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonsSexClick"
                 android:text="@string/male" />
 
             <Button
                 android:id="@+id/button15"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonsSexClick"
                 android:text="@string/female" />
 
         </com.google.android.material.internal.FlowLayout>
@@ -235,19 +246,19 @@
             <Button
                 android:id="@+id/button16"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonWeightClick"
                 android:text="@string/light" />
 
             <Button
                 android:id="@+id/button17"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonWeightClick"
                 android:text="@string/half_heavy" />
 
             <Button
                 android:id="@+id/button18"
                 style="@style/filters_button"
-                android:onClick="buttonClick"
+                android:onClick="buttonWeightClick"
                 android:text="@string/heavy" />
 
         </com.google.android.material.internal.FlowLayout>
@@ -267,12 +278,11 @@
             android:id="@+id/slider"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:valueFrom="15"
-            android:valueTo="67"
+            android:max="67"
             android:min="15"
             android:stepSize="1"
-            android:max="67"
-            />
+            android:valueFrom="15"
+            android:valueTo="67" />
 
         <Button
             android:id="@+id/show"
