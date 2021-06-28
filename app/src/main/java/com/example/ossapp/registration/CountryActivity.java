@@ -82,6 +82,7 @@ public class CountryActivity extends AppCompatActivity {
                 for (int i = 0; i < cityDtoList.size(); i++) {
                     if(cityDtoList.get(i).getName().equals(strText)) {
                         UserDto.getInstance().setCity(cityDtoList.get(i).getId());
+                        break;
                     }
 
                 }
