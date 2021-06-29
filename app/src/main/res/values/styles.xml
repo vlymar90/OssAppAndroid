@@ -27,6 +27,7 @@
     </style>
 
     <style name="buttonsecond" parent="button">
+        <item name="android:layout_width">328dp</item>
         <item name="android:textColor">@color/black</item>
         <item name="backgroundTint">@color/white</item>
     </style>
