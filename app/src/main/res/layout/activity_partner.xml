@@ -117,21 +117,23 @@
             android:layout_marginBottom="15dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:clickable="true"
                 android:onClick="toQueries"
-                android:src="@drawable/request"
+                android:src="@drawable/chat_24px_active3x"
                 android:text="Queries"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:clickable="true"
                 android:onClick="search"
-                android:src="@drawable/partners"
+                android:src="@drawable/search_24px_active3x"
                 android:text="Partners"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -139,11 +141,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
                 android:clickable="true"
                 android:onClick="toProfile"
-                android:src="@drawable/request"
+                android:src="@drawable/profile_24px_active3x"
                 android:text="Profile"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

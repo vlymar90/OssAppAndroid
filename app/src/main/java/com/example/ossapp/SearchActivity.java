@@ -41,8 +41,8 @@ public class SearchActivity extends AppCompatActivity {
     private String level;
     private int ageMin;
     private int ageMax;
-    private int sexId;
-    private int weightId;
+    private String sex;
+    private String weightId;
 
     //временные бойцы
     UserResponseDto userDto1;
@@ -75,22 +75,14 @@ public class SearchActivity extends AppCompatActivity {
             ageMax = (int) getIntent().getFloatExtra("ageMax", 50);
         }
 
-        // получаем пол и переводим его в int
-        if (filter.hasExtra("sex")){
-            if (getIntent().getStringExtra("sex").equals("Мужской"))
-                sexId = 1;
-            if (getIntent().getStringExtra("sex").equals("Женский"))
-                sexId = 2;
+        // получаем пол и
+        if (filter.hasExtra("sex")) {
+            sex = getIntent().getStringExtra("sex");
         }
 
-        // получаем вес и переводим его в int
+        // получаем вес
         if (filter.hasExtra("weight")) {
-            if (getIntent().getStringExtra("weight").equals("Лёгкий"))
-                weightId = 1;
-            if (getIntent().getStringExtra("weight").equals("Средний"))
-                weightId = 2;
-            if (getIntent().getStringExtra("weight").equals("Тяжёлый"))
-                weightId = 3;
+            weightId = getIntent().getStringExtra("weight");
         }
 
 
@@ -101,7 +93,7 @@ public class SearchActivity extends AppCompatActivity {
         userDto1.setCity(city);
         userDto1.setStyle(style);
         userDto1.setLevel(level);
-        userDto1.setSexUser(sexId);
+        userDto1.setSexUser(sex);
         userDto1.setUserWeight(weightId);
 
         userDto2 = new UserResponseDto();
@@ -110,7 +102,7 @@ public class SearchActivity extends AppCompatActivity {
         userDto2.setCity(city);
         userDto2.setStyle(style);
         userDto2.setLevel(level);
-        userDto2.setSexUser(sexId);
+        userDto2.setSexUser(sex);
         userDto2.setUserWeight(weightId);
 
         userDto3 = new UserResponseDto();
@@ -119,7 +111,7 @@ public class SearchActivity extends AppCompatActivity {
         userDto3.setCity(city);
         userDto3.setStyle(style);
         userDto3.setLevel(level);
-        userDto3.setSexUser(sexId);
+        userDto3.setSexUser(sex);
         userDto3.setUserWeight(weightId);
 
         listOfFighters = new LinkedList<>();
@@ -191,9 +183,9 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     // переход на карточку бойца. не реализован
-    public void lookAtFighter(View view){
+    public void lookAtFighter(View view) {
         Intent intent = new Intent(this, PartnerActivity.class);
-        // intent.putExtra("dto", userResponseDto);
+       // intent.putExtra("dto", userDto1);
         startActivity(intent);
     }
 }

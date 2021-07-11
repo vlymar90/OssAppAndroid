@@ -10,8 +10,8 @@ public class UserResponseDto implements Serializable {
     private String name;
     private String nickTelegram;
     private String phone;
-    private int weight;
-    private int sex;
+    private String weight;
+    private String sex;
     private int userAge;
     private String city;
     private String about;
@@ -36,8 +36,8 @@ public class UserResponseDto implements Serializable {
     }
 
     public boolean fullField() {
-        if(!name.isEmpty() && userAge !=0 && sex !=0
-                && weight !=0) {
+        if(!name.isEmpty() && userAge !=0 && sex !=null
+                && weight !=null) {
             return true;
         }
         return false;
@@ -58,11 +58,11 @@ public class UserResponseDto implements Serializable {
         return phone;
     }
 
-    public int getUserWeight() {
+    public String getUserWeight() {
         return weight;
     }
 
-    public int getSexUser() {
+    public String getSexUser() {
         return sex;
     }
 
@@ -102,11 +102,11 @@ public class UserResponseDto implements Serializable {
         this.phone = phone;
     }
 
-    public void setUserWeight(int userWeight) {
+    public void setUserWeight(String userWeight) {
         this.weight = userWeight;
     }
 
-    public void setSexUser(int sexUser) {
+    public void setSexUser(String sexUser) {
         this.sex = sexUser;
     }
 

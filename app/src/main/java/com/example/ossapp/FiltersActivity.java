@@ -48,10 +48,11 @@ public class FiltersActivity extends AppCompatActivity {
         buttons = new ArrayList<>(); //хранит все кнопки, для очистки фильтров
         styles = new ArrayList<>(); //хранит кнопки стилей, чтобы они потом деактивировались
         levels = new ArrayList<>(); //хранит кнопки уровней, чтобы они потом деактивировались
+        sex = new ArrayList<>(); //хранит кнопки выбора пола
+        weights = new ArrayList<>(); //хранит кнопки выбора веса
 
         ageSlider = findViewById(R.id.slider);
         ageSlider.setValues(20f, 50f); // выбор возраста
-
 
     }
 
@@ -93,23 +94,7 @@ public class FiltersActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*
-    нажатие на кнопку
-     */
-    public void buttonClick(View view) {
-        Button selectButton = (Button) view;
-        if (!selectButton.isSelected()) {
-            selectButton.setBackgroundColor(Color.BLUE);
-            selectButton.setTextColor(Color.WHITE);
-            selectButton.setSelected(true);
-            buttons.add(selectButton);
-        } else if (selectButton.isSelected()) {
-            selectButton.setBackgroundColor(Color.WHITE);
-            selectButton.setTextColor(Color.BLACK);
-            selectButton.setSelected(false);
-            buttons.remove(selectButton);
-        }
-    }
+
 
     //нажатие на кнопку любого стиля
     public void buttonStyleClick(View view) {
@@ -150,5 +135,23 @@ public class FiltersActivity extends AppCompatActivity {
         }
         views.add(button);
         buttonClick(view);
+    }
+
+    /*
+    нажатие на кнопку
+     */
+    public void buttonClick(View view) {
+        Button selectButton = (Button) view;
+        if (!selectButton.isSelected()) {
+            selectButton.setBackgroundColor(Color.BLUE);
+            selectButton.setTextColor(Color.WHITE);
+            selectButton.setSelected(true);
+            buttons.add(selectButton);
+        } else if (selectButton.isSelected()) {
+            selectButton.setBackgroundColor(Color.WHITE);
+            selectButton.setTextColor(Color.BLACK);
+            selectButton.setSelected(false);
+            buttons.remove(selectButton);
+        }
     }
 }
