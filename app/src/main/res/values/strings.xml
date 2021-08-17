@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">OssApp</string>
+    <string name="resume">Продолжить</string>
+    <string name="input_number">Зарегистрируйтесь в приложении</string>
+    <string name="skip">Пропустить</string>
+    <string name="back">Убрать фото</string>
+    <string name="weight">Выберите свой вес*</string>
+    <string name="hintAge">Введите ваш возраст*</string>
+    <string name="hintnickTelegramm">Введите ваш ник в Telegram*</string>
+    <string name="header2">Выберите ваш вид единоборств
+        (максимум 3)</string>
+    <string name="title_activity_fighting_styles">ScrollingActivity</string>
+    <string name="style2">ММА</string>
+    <string name="style3">БЖЖ</string>
+    <string name="style5">Кикбоксинг</string>
+    <string name="style6">Карате</string>
+    <string name="style7">Самбо</string>
+    <string name="style8">Тхэквондо</string>
+    <string name="style9">Дзюдо</string>
+    <string name="style10">Вольная борьба</string>
+    <string name="style11">Грэпплинг</string>
+    <string name="style12">Бокс</string>
+    <string name="style13">Муай-Тай</string>
+    <string name="confirmation">Подтвердите email</string>
+    <string name="rules">
+        "OssApp использует файлы cookie и личные данные"
+        "(такие как идентификаторы пользователей и"
+        "характеристики устройства), хранящиеся на вашем"
+        "устройстве, чтобы предоставлять услуги и повышать"
+        "их качество, обеспечивать безопасность, получать"
+        "аналитические сведения об аудитории и"
+        "предотвращать мошенничество.\n\n"
+
+        "С вашего согласия компания OssApp может"
+        "использовать эту информацию для персонализации"
+        "рекламы и определения ее эффективности. В"
+        "противном случае будут показываться только базовые"
+        "рекламные объявления.\n\n"
+
+        "Вы можете сделать выбор ниже, а также можете"
+        "изменить его в любое время в настройках. Ваш выбор"
+        "будет распространяться только на OssApp и не"
+        "повлияет на ваше использование других сайтов и"
+        "приложений."</string>
+    <string name="rulesname">OssApp защищает вашу конфиденциальность</string>
+    <string name="rulesbutton">Принять и продолжить</string>
+    <string name="addprofil">Профиль</string>
+    <string name="info_entry">Нажимая «Создать аккаунт» или «Войти»,
+        вы соглашаетесь с нашими Условиями. Узнайте, как мы обрабатываем
+        ваши данные, ознакомившись с </string>
+    <string name="linkrules"><u>Политикой конфиденциальности и Политикой в отношении файлов cookie</u>.</string>
+    <string name="open">Войти</string>
+    <string name="create_profil">Создать аккаунт</string>
+    <string name="login_page_header">Войдите в приложение</string>
+    <string name="recover_password"><u>Забыли пароль?</u></string>
+    <string name="input">Войти</string>
+    <string name="password_header">Забыли пароль?</string>
+    <string name="info_password">Мы поможем вам его восстановить и опять войти в приложение. Просто введите Email
+    вашего аккаунта и мы отправим вам пароль.</string>
+    <string name="recover">Восстановить пароль</string>
+    <string name="new_password">Задайте пароль для вашего аккаунта</string>
+    <string-array name="city">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Ростов-на-Дону</item>
+        <item>Нижний Новгород</item>
+        <item>Тольятти</item>
+        <item>Владимир</item>
+        <item>Екатеринбург</item>
+        <item>Калининград</item>
+        <item>Воронеж</item>
+    </string-array>
+    <string name="partners">Спарринг-партнёры</string>
+    <string name="partner">Спарринг-партнёр</string>
+    <string name="city">Город</string>
+    <string name="filters">Фильтры</string>
+    <string name="cancel">Сбросить</string>
+    <string name="fighting_styles">Вид единоборств</string>
+    <string name="level_master">Уровень владения</string>
+    <string name="select_level">Выберите уровень владения</string>
+    <string name="rookie">Начинающий</string>
+    <string name="medium">Средний</string>
+    <string name="advanced">Продвинутый</string>
+    <string name="professional">Профессионал</string>
+    <string name="sex">Пол спарринг партнёра</string>
+    <string name="weight_of_partner">Вес спарринг партнёра</string>
+    <string name="just_weight">Вес спарринг партнёра</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="light">Лёгкий</string>
+    <string name="half_heavy">Средний</string>
+    <string name="heavy">Тяжёлый</string>
+    <string name="age">Возраст</string>
+    <string name="age_of_partners">Возрастной диапазон</string>
+    <string name="show_result">Показать результаты</string>
+    <string name="title_activity_profile">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="send_query">ОТПРАВИТЬ ЗАПРОС</string>
+</resources>
